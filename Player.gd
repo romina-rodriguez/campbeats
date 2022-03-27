@@ -38,8 +38,8 @@ func _physics_process(delta):
 	else:
 		playback.travel("jump")
 	
-	if Input.is_action_just_pressed("atack"):
-		playback.travel("atack")
+	if Input.is_action_just_pressed("attack"):
+		playback.travel("attack")
 	if Input.is_action_just_pressed("left") and _facing_right:
 		_facing_right = false
 		scale.x = -1

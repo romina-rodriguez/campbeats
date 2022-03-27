@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://FinnSprite.png" type="Texture" id=1]
-[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -250,16 +250,17 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=9]
-states/atack/node = SubResource( 17 )
-states/atack/position = Vector2( 772, 276 )
+states/attack/node = SubResource( 17 )
+states/attack/position = Vector2( 772, 276 )
 states/idle/node = SubResource( 5 )
 states/idle/position = Vector2( 234, 124 )
 states/jump/node = SubResource( 13 )
 states/jump/position = Vector2( 772, 113 )
 states/run/node = SubResource( 6 )
 states/run/position = Vector2( 234, 302 )
-transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "idle", "jump", SubResource( 14 ), "jump", "idle", SubResource( 15 ), "idle", "atack", SubResource( 18 ), "atack", "idle", SubResource( 19 ), "jump", "atack", SubResource( 20 ), "atack", "jump", SubResource( 21 ), "run", "atack", SubResource( 22 ), "atack", "run", SubResource( 23 ) ]
+transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "idle", "jump", SubResource( 14 ), "jump", "idle", SubResource( 15 ), "idle", "attack", SubResource( 18 ), "attack", "idle", SubResource( 19 ), "jump", "attack", SubResource( 20 ), "attack", "jump", SubResource( 21 ), "run", "attack", SubResource( 22 ), "attack", "run", SubResource( 23 ) ]
 start_node = "idle"
+graph_offset = Vector2( 0, 163.008 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
