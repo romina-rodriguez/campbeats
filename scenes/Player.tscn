@@ -214,55 +214,54 @@ tracks/2/keys = {
 "values": [ 9, 10, 11, 12, 13, 14 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=17]
-animation = "atack"
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "attack"
 
-[sub_resource type="AnimationNodeAnimation" id=5]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=23]
 animation = "jump"
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=24]
 animation = "run"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=7]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=8]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=14]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=15]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=18]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=19]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=21]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=22]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id=9]
-states/attack/node = SubResource( 17 )
-states/attack/position = Vector2( 772, 276 )
-states/idle/node = SubResource( 5 )
-states/idle/position = Vector2( 234, 124 )
-states/jump/node = SubResource( 13 )
-states/jump/position = Vector2( 772, 113 )
-states/run/node = SubResource( 6 )
-states/run/position = Vector2( 234, 302 )
-transitions = [ "idle", "run", SubResource( 7 ), "run", "idle", SubResource( 8 ), "idle", "jump", SubResource( 14 ), "jump", "idle", SubResource( 15 ), "idle", "attack", SubResource( 18 ), "attack", "idle", SubResource( 19 ), "jump", "attack", SubResource( 20 ), "attack", "jump", SubResource( 21 ), "run", "attack", SubResource( 22 ), "attack", "run", SubResource( 23 ) ]
-start_node = "idle"
-graph_offset = Vector2( 0, 71.316 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=10]
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=18]
+states/attack/node = SubResource( 20 )
+states/attack/position = Vector2( 966, 240 )
+states/idle/node = SubResource( 17 )
+states/idle/position = Vector2( 406, 146 )
+states/jump/node = SubResource( 23 )
+states/jump/position = Vector2( 775, 83 )
+states/run/node = SubResource( 24 )
+states/run/position = Vector2( 338, 409 )
+transitions = [ "idle", "attack", SubResource( 21 ), "attack", "idle", SubResource( 22 ), "idle", "jump", SubResource( 25 ), "jump", "idle", SubResource( 26 ), "jump", "attack", SubResource( 27 ), "attack", "jump", SubResource( 28 ), "idle", "run", SubResource( 29 ), "run", "idle", SubResource( 30 ), "run", "attack", SubResource( 31 ), "attack", "run", SubResource( 32 ) ]
+start_node = "idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=19]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -285,7 +284,7 @@ anims/jump = SubResource( 11 )
 anims/run = SubResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 9 )
+tree_root = SubResource( 18 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 10 )
+parameters/playback = SubResource( 19 )
