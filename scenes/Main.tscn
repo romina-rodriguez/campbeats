@@ -34,7 +34,16 @@ position = Vector2( 576, 798 )
 shape = SubResource( 1 )
 
 [node name="MusicNote" parent="." instance=ExtResource( 3 )]
-position = Vector2( 554, 692 )
+position = Vector2( 735, 692 )
+
+[node name="MusicNote2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 848, 636 )
+
+[node name="MusicNote4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 619, 694 )
+
+[node name="MusicNote3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 931, 700 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
