@@ -1,13 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=2]
 [ext_resource path="res://scenes/MusicNote.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 576, 33 )
+extents = Vector2( 576, 34 )
+
+[sub_resource type="TileSet" id=2]
 
 [node name="World" type="Node2D"]
+position = Vector2( 1, 0 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 576, 416 )
@@ -15,13 +18,24 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 95, 196 )
+position = Vector2( 375, 405 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
+limit_bottom = 832
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
 
 [node name="Ground" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 576, 797 )
+position = Vector2( 576, 798 )
 shape = SubResource( 1 )
 
 [node name="MusicNote" parent="." instance=ExtResource( 3 )]
 position = Vector2( 554, 692 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+format = 1
