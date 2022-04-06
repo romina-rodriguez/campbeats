@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/note.png" type="Texture" id=1]
 [ext_resource path="res://scripts/MusicNote.gd" type="Script" id=2]
+[ext_resource path="res://assets/Sounds/nota musical/8bit-game-type-single-note_C.wav" type="AudioStream" id=3]
 
 [sub_resource type="CapsuleShape2D" id=3]
 height = 2.0
@@ -37,6 +38,37 @@ tracks/0/keys = {
 "values": [ Vector2( 0, -5 ), Vector2( 0, 5 ) ]
 }
 
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -87 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "collectedBounce"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -5 ), Vector2( 0, -87 ), Vector2( 0, -50 ) ]
+}
+
 [node name="MusicNote" type="Area2D"]
 script = ExtResource( 2 )
 
@@ -55,4 +87,14 @@ autoplay = "idle"
 anims/RESET = SubResource( 1 )
 anims/idle = SubResource( 2 )
 
+[node name="CollectNote" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite")
+anims/RESET = SubResource( 4 )
+anims/collectedBounce = SubResource( 5 )
+
+[node name="SoundCollect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -2.0
+
 [connection signal="body_entered" from="." to="." method="_on_MusicNote_body_entered"]
+[connection signal="animation_finished" from="CollectNote" to="." method="_on_CollectNote_animation_finished"]
