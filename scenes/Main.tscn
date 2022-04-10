@@ -636,7 +636,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 25/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 59.5, 192.25 )
+extents = Vector2( 59.5, 277.625 )
 
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 1340, 116 )
@@ -714,7 +714,7 @@ drag_margin_v_enabled = true
 position = Vector2( 1, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLimits/Wall2"]
-position = Vector2( 2639, 669 )
+position = Vector2( 2639, 583.625 )
 shape = SubResource( 3 )
 
 [node name="MusicNotes" type="Node" parent="."]
