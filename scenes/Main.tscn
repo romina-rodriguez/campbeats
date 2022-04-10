@@ -666,7 +666,7 @@ drag_margin_v_enabled = true
 position = Vector2( 1, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLimits/Wall2"]
-position = Vector2( 2199, 672 )
+position = Vector2( 2527, 672 )
 shape = SubResource( 3 )
 
 [node name="MusicNotes" type="Node" parent="."]
