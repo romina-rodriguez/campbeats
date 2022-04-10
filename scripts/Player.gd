@@ -8,6 +8,7 @@ extends KinematicBody2D
 
 var lineal_vel= Vector2.ZERO
 var SPEED = 300
+var JUMP_FORCE = 1.2
 var GRAVITY = 500
 
 var _facing_right = true
@@ -27,7 +28,7 @@ func _physics_process(delta):
 	lineal_vel.x = lerp(lineal_vel.x, target_vel * SPEED, 0.5)
 	
 	if Input.is_action_just_pressed("jump") and on_floor :
-		lineal_vel.y = -SPEED
+		lineal_vel.y = -SPEED*JUMP_FORCE
 		
 	# Animations
 	if on_floor:
