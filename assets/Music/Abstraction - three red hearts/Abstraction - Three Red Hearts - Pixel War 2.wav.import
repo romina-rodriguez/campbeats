@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Abstraction - Three Red Hearts - Pixel War 2.wav-f0851d4037ee64e104795c780634780b.sample"
+
+[deps]
+
+source_file="res://assets/Music/Abstraction - three red hearts/Abstraction - Three Red Hearts - Pixel War 2.wav"
+dest_files=[ "res://.import/Abstraction - Three Red Hearts - Pixel War 2.wav-f0851d4037ee64e104795c780634780b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
