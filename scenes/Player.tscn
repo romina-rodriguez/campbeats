@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/CatSprite.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
@@ -9,6 +9,7 @@ height = 5.0
 
 [sub_resource type="Animation" id=2]
 length = 0.001
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -89,6 +90,132 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=3]
+resource_name = "dash_idle"
+length = 1.85
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35, 1.5, 1.65 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 16, 2, 3, 16, 4, 5, 16, 6, 7, 16 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 28 ]
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "dash_jump"
+length = 0.8
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 28 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 16, 15, 16 ]
+}
+
+[sub_resource type="Animation" id=37]
+resource_name = "dash_run"
+length = 1.25
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 28 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 16, 11, 12, 16, 13, 14, 16 ]
+}
+
+[sub_resource type="Animation" id=51]
 resource_name = "idle"
 length = 1.2
 loop = true
@@ -217,6 +344,15 @@ tracks/2/keys = {
 [sub_resource type="AnimationNodeAnimation" id=20]
 animation = "attack"
 
+[sub_resource type="AnimationNodeAnimation" id=42]
+animation = "dash_idle"
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+animation = "dash_jump"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+animation = "dash_run"
+
 [sub_resource type="AnimationNodeAnimation" id=17]
 animation = "idle"
 
@@ -235,31 +371,40 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=27]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
-switch_mode = 2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=29]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=30]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=32]
-switch_mode = 2
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=52]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
 
 [sub_resource type="AnimationNodeStateMachine" id=18]
 states/attack/node = SubResource( 20 )
-states/attack/position = Vector2( 966, 240 )
+states/attack/position = Vector2( 981, 181 )
+states/dash_idle/node = SubResource( 42 )
+states/dash_idle/position = Vector2( 178, 146 )
+states/dash_jump/node = SubResource( 43 )
+states/dash_jump/position = Vector2( -220, 21.0165 )
+states/dash_run/node = SubResource( 44 )
+states/dash_run/position = Vector2( -220, 293 )
 states/idle/node = SubResource( 17 )
 states/idle/position = Vector2( 406, 146 )
 states/jump/node = SubResource( 23 )
-states/jump/position = Vector2( 775, 83 )
+states/jump/position = Vector2( 981, -2 )
 states/run/node = SubResource( 24 )
-states/run/position = Vector2( 338, 409 )
-transitions = [ "idle", "attack", SubResource( 21 ), "attack", "idle", SubResource( 22 ), "idle", "jump", SubResource( 25 ), "jump", "idle", SubResource( 26 ), "jump", "attack", SubResource( 27 ), "attack", "jump", SubResource( 28 ), "idle", "run", SubResource( 29 ), "run", "idle", SubResource( 30 ), "run", "attack", SubResource( 31 ), "attack", "run", SubResource( 32 ) ]
+states/run/position = Vector2( 981, 370.016 )
+transitions = [ "idle", "attack", SubResource( 21 ), "attack", "idle", SubResource( 22 ), "idle", "jump", SubResource( 25 ), "jump", "idle", SubResource( 26 ), "idle", "run", SubResource( 29 ), "run", "idle", SubResource( 30 ), "idle", "dash_idle", SubResource( 45 ), "dash_idle", "idle", SubResource( 46 ), "dash_idle", "dash_jump", SubResource( 47 ), "dash_jump", "dash_idle", SubResource( 48 ), "dash_run", "dash_idle", SubResource( 52 ), "dash_idle", "dash_run", SubResource( 53 ) ]
 start_node = "idle"
+graph_offset = Vector2( -481.695, -192.83 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=19]
 
@@ -279,7 +424,10 @@ hframes = 28
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/attack = SubResource( 16 )
-anims/idle = SubResource( 3 )
+anims/dash_idle = SubResource( 3 )
+anims/dash_jump = SubResource( 41 )
+anims/dash_run = SubResource( 37 )
+anims/idle = SubResource( 51 )
 anims/jump = SubResource( 11 )
 anims/run = SubResource( 4 )
 
