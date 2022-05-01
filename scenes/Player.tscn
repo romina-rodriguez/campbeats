@@ -341,7 +341,7 @@ tracks/2/keys = {
 "values": [ 9, 10, 11, 12, 13, 14 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=20]
+[sub_resource type="AnimationNodeAnimation" id=54]
 animation = "attack"
 
 [sub_resource type="AnimationNodeAnimation" id=42]
@@ -353,7 +353,7 @@ animation = "dash_jump"
 [sub_resource type="AnimationNodeAnimation" id=44]
 animation = "dash_run"
 
-[sub_resource type="AnimationNodeAnimation" id=17]
+[sub_resource type="AnimationNodeAnimation" id=55]
 animation = "idle"
 
 [sub_resource type="AnimationNodeAnimation" id=23]
@@ -361,23 +361,6 @@ animation = "jump"
 
 [sub_resource type="AnimationNodeAnimation" id=24]
 animation = "run"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=26]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=29]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=45]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=46]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=47]
 
@@ -387,24 +370,41 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=53]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=61]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=63]
+
 [sub_resource type="AnimationNodeStateMachine" id=18]
-states/attack/node = SubResource( 20 )
-states/attack/position = Vector2( 981, 181 )
+states/attack/node = SubResource( 54 )
+states/attack/position = Vector2( 892.305, 146 )
 states/dash_idle/node = SubResource( 42 )
 states/dash_idle/position = Vector2( 178, 146 )
 states/dash_jump/node = SubResource( 43 )
-states/dash_jump/position = Vector2( -220, 21.0165 )
+states/dash_jump/position = Vector2( -220, -10 )
 states/dash_run/node = SubResource( 44 )
 states/dash_run/position = Vector2( -220, 293 )
-states/idle/node = SubResource( 17 )
-states/idle/position = Vector2( 406, 146 )
+states/idle/node = SubResource( 55 )
+states/idle/position = Vector2( 479.305, 146 )
 states/jump/node = SubResource( 23 )
-states/jump/position = Vector2( 981, -2 )
+states/jump/position = Vector2( 892.305, -10 )
 states/run/node = SubResource( 24 )
-states/run/position = Vector2( 981, 370.016 )
-transitions = [ "idle", "attack", SubResource( 21 ), "attack", "idle", SubResource( 22 ), "idle", "jump", SubResource( 25 ), "jump", "idle", SubResource( 26 ), "idle", "run", SubResource( 29 ), "run", "idle", SubResource( 30 ), "idle", "dash_idle", SubResource( 45 ), "dash_idle", "idle", SubResource( 46 ), "dash_idle", "dash_jump", SubResource( 47 ), "dash_jump", "dash_idle", SubResource( 48 ), "dash_run", "dash_idle", SubResource( 52 ), "dash_idle", "dash_run", SubResource( 53 ) ]
+states/run/position = Vector2( 892.305, 293 )
+transitions = [ "dash_idle", "dash_jump", SubResource( 47 ), "dash_jump", "dash_idle", SubResource( 48 ), "dash_run", "dash_idle", SubResource( 52 ), "dash_idle", "dash_run", SubResource( 53 ), "idle", "attack", SubResource( 56 ), "attack", "idle", SubResource( 57 ), "idle", "jump", SubResource( 58 ), "idle", "run", SubResource( 59 ), "jump", "idle", SubResource( 60 ), "run", "idle", SubResource( 61 ), "idle", "dash_idle", SubResource( 62 ), "dash_idle", "idle", SubResource( 63 ) ]
 start_node = "idle"
-graph_offset = Vector2( -481.695, -192.83 )
+graph_offset = Vector2( -481.695, -126.205 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=19]
 
@@ -420,6 +420,7 @@ position = Vector2( 11, 0 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 hframes = 28
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )

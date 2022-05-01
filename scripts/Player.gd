@@ -49,15 +49,12 @@ func _physics_process(delta):
 			playback.travel("dash_jump")
 		else:
 			playback.travel("jump")
-		
-	
+			
 	if Input.is_action_just_pressed("attack"):
 		playback.travel("attack")
-	
 	if Input.is_action_just_pressed("left") and _facing_right:
 		_facing_right = false
 		scale.x = -1
-		
 	if Input.is_action_just_pressed("right") and not _facing_right:
 		_facing_right = true
 		scale.x = -1
@@ -67,10 +64,7 @@ func _physics_process(delta):
 		yield(get_tree().create_timer(10),"timeout")
 		POWER_UP = false
 		SPEED = 300
-		
 	
-
-		
 
 
 func _on_fallzone_body_entered(body):
