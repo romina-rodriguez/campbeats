@@ -57,3 +57,9 @@ func _physics_process(delta):
 
 func _on_fallzone_body_entered(body):
 	get_tree().change_scene("res://scenes/Main.tscn")
+
+
+
+func _on_levelEnd_body_entered(body):
+	#In the meantime, this function just restars the level when the player enters the 2D Area
+	get_tree().change_scene("res://scenes/Main.tscn")
