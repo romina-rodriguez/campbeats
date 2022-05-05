@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Abstraction - Three Red Hearts - Save the City.wav-90a17e6b098016b49f2fc3cac10f68b5.sample"
+
+[deps]
+
+source_file="res://assets/Music/Abstraction - Three Red Hearts - Save the City.wav"
+dest_files=[ "res://.import/Abstraction - Three Red Hearts - Save the City.wav-90a17e6b098016b49f2fc3cac10f68b5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
