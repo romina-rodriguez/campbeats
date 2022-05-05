@@ -722,24 +722,6 @@ shape = SubResource( 3 )
 [node name="MusicNote" parent="MusicNotes" instance=ExtResource( 3 )]
 position = Vector2( 758, 762 )
 
-[node name="MusicNote2" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 940, 710 )
-
-[node name="MusicNote4" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 620, 762 )
-
-[node name="MusicNote3" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 1338, 762 )
-
-[node name="MusicNote5" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 1185, 762 )
-
-[node name="MusicNote6" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 1517, 698 )
-
-[node name="MusicNote7" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 2380, 557 )
-
 [node name="fallzone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fallzone"]
