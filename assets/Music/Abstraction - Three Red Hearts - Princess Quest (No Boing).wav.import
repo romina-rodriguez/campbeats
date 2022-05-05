@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Abstraction - Three Red Hearts - Princess Quest (No Boing).wav-d38d6e2b745b71f4e7f9e7e023be7791.sample"
+
+[deps]
+
+source_file="res://assets/Music/Abstraction - Three Red Hearts - Princess Quest (No Boing).wav"
+dest_files=[ "res://.import/Abstraction - Three Red Hearts - Princess Quest (No Boing).wav-d38d6e2b745b71f4e7f9e7e023be7791.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
