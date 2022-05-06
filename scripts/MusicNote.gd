@@ -4,10 +4,14 @@ var TIME = 3
 var ACTIVATE = false
 onready var playback = $AnimationTree.get("parameters/playback")
 
-func _on_MusicNote_body_entered(_body):
+signal note_collected
+
+func _on_MusicNote_body_entered(body):
 	if(ACTIVATE):
 		
 		playback.travel("get")
+		emit_signal("note_collected")
+		body.add_note()
 		$SoundCollect.play()
 		
 	
@@ -22,3 +26,4 @@ func _process(delta):
 		
 func _on_CollectNote_animation_finished(anim_name):
 	queue_free()
+	

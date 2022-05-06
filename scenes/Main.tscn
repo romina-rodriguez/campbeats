@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" type="Texture" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" type="Texture" id=6]
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" type="Texture" id=7]
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" type="Texture" id=8]
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=9]
+[ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/note.png" type="Texture" id=11]
+[ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -636,13 +641,17 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 25/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 59.5, 277.625 )
+extents = Vector2( 59.5, 277.156 )
 
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 1730, 116 )
 
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 25.125, 60.5 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 60
+font_data = ExtResource( 10 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -652,7 +661,7 @@ scale = Vector2( 2, 2 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 1245253, 18, 0, 1245255, 24, 0, 1245256, 24, 0, 1245257, 24, 0, 1245258, 19, 0, 1376335, 18, 0, 1376337, 25, 0, 1376338, 25, 0, 1376339, 25, 0, 1376340, 19, 0, 1376359, 18, 0, 1376360, 19, 0, 1376362, 17, 0, 1441853, 18, 0, 1441855, 19, 0, 1441898, 21, 0, 1507434, 21, 0, 1572970, 21, 0, 1638506, 21, 0, 1704042, 21, 0, 1769472, 2, 0, 1769473, 2, 0, 1769474, 2, 0, 1769475, 2, 0, 1769476, 2, 0, 1769477, 2, 0, 1769478, 2, 0, 1769479, 2, 0, 1769480, 2, 0, 1769481, 2, 0, 1769482, 2, 0, 1769483, 2, 0, 1769484, 2, 0, 1769485, 2, 0, 1769486, 2, 0, 1769487, 2, 0, 1769488, 2, 0, 1769489, 2, 0, 1769490, 2, 0, 1769491, 2, 0, 1769492, 2, 0, 1769493, 2, 0, 1769494, 2, 0, 1769495, 2, 0, 1769496, 2, 0, 1769497, 2, 0, 1769498, 2, 0, 1769499, 2, 0, 1769500, 2, 0, 1769501, 3, 0, 1769507, 1, 0, 1769508, 2, 0, 1769509, 2, 0, 1769510, 2, 0, 1769511, 2, 0, 1769512, 2, 0, 1769513, 2, 0, 1769514, 2, 0, 1769515, 2, 0, 1769516, 2, 0, 1769517, 2, 0, 1769518, 2, 0, 1769519, 2, 0, 1769520, 2, 0, 1769521, 2, 0, 1769522, 2, 0, 1769523, 2, 0, 1769524, 2, 0, 1769525, 2, 0, 1769526, 2, 0, 1769527, 2, 0, 1769528, 2, 0, 1769529, 2, 0, 1769530, 2, 0, 1769531, 2, 0, 1769532, 2, 0, 1769533, 2, 0, 1769534, 2, 0, 1769535, 2, 0, 1769536, 2, 0, 1769537, 2, 0, 1769538, 2, 0, 1769539, 2, 0, 1769540, 2, 0, 1769541, 2, 0, 1769542, 2, 0, 1769543, 2, 0, 1769544, 2, 0, 1769545, 2, 0, 1769546, 2, 0, 1769547, 2, 0, 1769548, 2, 0, 1769549, 2, 0, 1769550, 2, 0, 1769551, 2, 0, 1769552, 2, 0, 1769553, 2, 0, 1769554, 2, 0, 1769555, 2, 0, 1769556, 2, 0, 1769557, 2, 0, 1769558, 2, 0, 1769559, 2, 0, 1769560, 2, 0, 1769561, 2, 0, 1769562, 3, 0, 1769568, 1, 0, 1769569, 2, 0, 1769570, 2, 0, 1769571, 2, 0, 1769572, 2, 0, 1769573, 2, 0, 1769574, 2, 0, 1769575, 2, 0, 1769576, 2, 0, 1769577, 2, 0, 1769578, 2, 0, 1769579, 2, 0, 1769580, 2, 0, 1769581, 2, 0, 1769582, 2, 0, 1769583, 2, 0, 1769584, 2, 0, 1769585, 2, 0, 1769586, 2, 0, 1769587, 2, 0, 1769588, 2, 0, 1769589, 2, 0, 1769590, 2, 0, 1769591, 2, 0, 1769592, 2, 0, 1769593, 2, 0, 1769594, 2, 0, 1769595, 2, 0, 1769596, 2, 0, 1769597, 2, 0, 1769598, 2, 0, 1769599, 2, 0, 1769600, 2, 0, 1769601, 2, 0 )
+tile_data = PoolIntArray( 1245253, 18, 0, 1245255, 24, 0, 1245256, 24, 0, 1245257, 24, 0, 1245258, 19, 0, 1376335, 18, 0, 1376337, 25, 0, 1376338, 25, 0, 1376339, 25, 0, 1376340, 19, 0, 1441853, 18, 0, 1441855, 19, 0, 1769472, 2, 0, 1769473, 2, 0, 1769474, 2, 0, 1769475, 2, 0, 1769476, 2, 0, 1769477, 2, 0, 1769478, 2, 0, 1769479, 2, 0, 1769480, 2, 0, 1769481, 2, 0, 1769482, 2, 0, 1769483, 2, 0, 1769484, 2, 0, 1769485, 2, 0, 1769486, 2, 0, 1769487, 2, 0, 1769488, 2, 0, 1769489, 2, 0, 1769490, 2, 0, 1769491, 2, 0, 1769492, 2, 0, 1769493, 2, 0, 1769494, 2, 0, 1769495, 2, 0, 1769496, 2, 0, 1769497, 2, 0, 1769498, 2, 0, 1769499, 2, 0, 1769500, 2, 0, 1769501, 3, 0, 1769507, 1, 0, 1769508, 2, 0, 1769509, 2, 0, 1769510, 2, 0, 1769511, 2, 0, 1769512, 2, 0, 1769513, 2, 0, 1769514, 2, 0, 1769515, 2, 0, 1769516, 2, 0, 1769517, 2, 0, 1769518, 2, 0, 1769519, 2, 0, 1769520, 2, 0, 1769521, 2, 0, 1769522, 2, 0, 1769523, 2, 0, 1769524, 2, 0, 1769525, 2, 0, 1769526, 2, 0, 1769527, 2, 0, 1769528, 2, 0, 1769529, 2, 0, 1769530, 2, 0, 1769531, 2, 0, 1769532, 2, 0, 1769533, 2, 0, 1769534, 2, 0, 1769535, 2, 0, 1769536, 2, 0, 1769537, 2, 0, 1769538, 2, 0, 1769539, 2, 0, 1769540, 2, 0, 1769541, 2, 0, 1769542, 2, 0, 1769543, 2, 0, 1769544, 2, 0, 1769545, 2, 0, 1769546, 2, 0, 1769547, 2, 0, 1769548, 2, 0, 1769549, 2, 0, 1769550, 2, 0, 1769551, 2, 0, 1769552, 2, 0, 1769553, 2, 0, 1769554, 2, 0, 1769555, 2, 0, 1769556, 2, 0, 1769557, 2, 0, 1769558, 2, 0, 1769559, 2, 0, 1769560, 2, 0, 1769561, 2, 0, 1769562, 3, 0, 1769568, 1, 0, 1769569, 2, 0, 1769570, 2, 0, 1769571, 2, 0, 1769572, 2, 0, 1769573, 2, 0, 1769574, 2, 0, 1769575, 2, 0, 1769576, 2, 0, 1769577, 2, 0, 1769578, 2, 0, 1769579, 2, 0, 1769580, 2, 0, 1769581, 2, 0, 1769582, 2, 0, 1769583, 2, 0, 1769584, 2, 0, 1769585, 2, 0, 1769586, 2, 0, 1769587, 2, 0, 1769588, 2, 0, 1769589, 2, 0, 1769590, 2, 0, 1769591, 2, 0, 1769592, 2, 0, 1769593, 2, 0, 1769594, 2, 0, 1769595, 2, 0, 1769596, 2, 0, 1769597, 2, 0, 1769598, 2, 0, 1769599, 2, 0, 1769600, 2, 0, 1769601, 2, 0 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -702,7 +711,7 @@ texture = ExtResource( 7 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 375, 405 )
+position = Vector2( 168, 399 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -717,7 +726,7 @@ drag_margin_v_enabled = true
 position = Vector2( 1, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLimits/Wall2"]
-position = Vector2( 3463, 616 )
+position = Vector2( 3756, 587 )
 shape = SubResource( 3 )
 
 [node name="Wall3" type="StaticBody2D" parent="CollisionLimits"]
@@ -730,28 +739,33 @@ shape = SubResource( 3 )
 [node name="MusicNotes" type="Node" parent="."]
 
 [node name="MusicNote" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 758, 762 )
+position = Vector2( 822, 786 )
 
 [node name="MusicNote2" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 940, 710 )
-
-[node name="MusicNote4" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 620, 762 )
+position = Vector2( 666, 770 )
 
 [node name="MusicNote3" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 1338, 762 )
+position = Vector2( 1592, 805 )
+
+[node name="MusicNote4" parent="MusicNotes" instance=ExtResource( 3 )]
+position = Vector2( 2014, 658 )
 
 [node name="MusicNote5" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 1185, 762 )
+position = Vector2( 2651, 625 )
 
 [node name="MusicNote6" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 1517, 698 )
+position = Vector2( 2335, 547 )
 
 [node name="MusicNote7" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 2380, 557 )
+position = Vector2( 1421, 758 )
 
 [node name="MusicNote8" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 2640, 616 )
+position = Vector2( 1205, 809 )
+
+[node name="Node" type="Node" parent="MusicNotes"]
+
+[node name="Box" parent="MusicNotes/Node" instance=ExtResource( 13 )]
+position = Vector2( 525, 806 )
 
 [node name="fallzone" type="Area2D" parent="."]
 collision_layer = 0
@@ -767,11 +781,51 @@ __meta__ = {
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="levelEnd"]
-position = Vector2( 3352.13, 784 )
+position = Vector2( 3339, 803 )
 shape = SubResource( 31 )
 __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Checkpoint" parent="levelEnd" instance=ExtResource( 12 )]
+position = Vector2( 3325, 736 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 9 )
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 32.0
+margin_top = 29.0
+margin_right = 95.0
+margin_bottom = 97.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 96.0
+margin_top = 37.0
+margin_right = 270.0
+margin_bottom = 97.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 33 )
+text = "x"
+
+[node name="Notes" type="Label" parent="HUD"]
+margin_left = 141.0
+margin_top = 42.0
+margin_right = 315.0
+margin_bottom = 102.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 33 )
+text = "99"
+
+[connection signal="note_collected" from="MusicNotes/MusicNote" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="note_collected" from="MusicNotes/MusicNote2" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="note_collected" from="MusicNotes/MusicNote3" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="note_collected" from="MusicNotes/MusicNote4" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="note_collected" from="MusicNotes/MusicNote5" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="note_collected" from="MusicNotes/MusicNote6" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="note_collected" from="MusicNotes/MusicNote7" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="note_collected" from="MusicNotes/MusicNote8" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]
 [connection signal="body_entered" from="levelEnd" to="Player" method="_on_levelEnd_body_entered"]
