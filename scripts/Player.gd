@@ -10,11 +10,13 @@ var POWER_UP = false
 var notes = 0
 var _facing_right = true
 var ATTACK = false
+var DASH = 3
 
 onready var playback = $AnimationTree.get("parameters/playback")
 var timee = 1
 
 signal attack_made
+signal dash_made
 
 func _physics_process(delta):
 	var on_floor = is_on_floor()
@@ -62,12 +64,14 @@ func _input(event):
 	if Input.is_action_just_pressed("right") and not _facing_right:
 		_facing_right = true
 		scale.x = -1
-	if Input.is_action_just_pressed("dash"):
+	if Input.is_action_just_pressed("dash") and DASH > 0:
 		SPEED = 600
 		GRAVITY = 1000
 		JUMP_FORCE = 2.4
 		POWER_UP = true
-		yield(get_tree().create_timer(10),"timeout")
+		emit_signal("dash_made")
+		yield(get_tree().create_timer(5),"timeout")
+		DASH -= 1
 		POWER_UP = false
 		SPEED = 300
 		GRAVITY = 500
