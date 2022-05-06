@@ -73,15 +73,6 @@ func _input(event):
 		lineal_vel.y = -JUMP_SPEED*JUMP_FORCE
 
 
-#	var on_floor = is_on_floor()
-
-
-#	if Input.is_action_just_pressed("attack"):
-#		print("ataque")
-#		playback.travel("attack")
-#		print(playback.get_current_node())
-
-
 func _on_fallzone_body_entered(_body):
 	get_tree().change_scene("res://scenes/Main.tscn")
 

@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=10]
 [ext_resource path="res://assets/note.png" type="Texture" id=11]
 [ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -648,13 +649,6 @@ extents = Vector2( 1730, 116 )
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 25.125, 60.5 )
 
-[sub_resource type="StyleBoxFlat" id=32]
-bg_color = Color( 0, 0, 0, 0.211765 )
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
 [sub_resource type="DynamicFont" id=33]
 size = 60
 font_data = ExtResource( 10 )
@@ -751,7 +745,7 @@ position = Vector2( 822, 786 )
 position = Vector2( 666, 770 )
 
 [node name="MusicNote3" parent="MusicNotes" instance=ExtResource( 3 )]
-position = Vector2( 509, 787 )
+position = Vector2( 1592, 805 )
 
 [node name="MusicNote4" parent="MusicNotes" instance=ExtResource( 3 )]
 position = Vector2( 2014, 658 )
@@ -767,6 +761,11 @@ position = Vector2( 1421, 758 )
 
 [node name="MusicNote8" parent="MusicNotes" instance=ExtResource( 3 )]
 position = Vector2( 1205, 809 )
+
+[node name="Node" type="Node" parent="MusicNotes"]
+
+[node name="Box" parent="MusicNotes/Node" instance=ExtResource( 13 )]
+position = Vector2( 525, 806 )
 
 [node name="fallzone" type="Area2D" parent="."]
 collision_layer = 0
@@ -793,13 +792,6 @@ position = Vector2( 3325, 736 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 9 )
-
-[node name="Panel" type="Panel" parent="HUD"]
-margin_left = 30.0
-margin_top = 23.0
-margin_right = 222.0
-margin_bottom = 108.0
-custom_styles/panel = SubResource( 32 )
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
 margin_left = 32.0
