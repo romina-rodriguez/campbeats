@@ -710,16 +710,6 @@ scale = Vector2( 4.5, 4.5 )
 texture = ExtResource( 7 )
 centered = false
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 168, 399 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-limit_left = 0
-limit_bottom = 900
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-
 [node name="CollisionLimits" type="Node" parent="."]
 
 [node name="Wall2" type="StaticBody2D" parent="CollisionLimits"]
@@ -766,6 +756,16 @@ position = Vector2( 1205, 809 )
 
 [node name="Box" parent="MusicNotes/Node" instance=ExtResource( 13 )]
 position = Vector2( 525, 806 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, 399 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
+limit_bottom = 900
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
 
 [node name="fallzone" type="Area2D" parent="."]
 collision_layer = 0
@@ -827,5 +827,7 @@ text = "99"
 [connection signal="note_collected" from="MusicNotes/MusicNote6" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote7" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote8" to="HUD" method="_on_MusicNote_collected"]
+[connection signal="body_exited" from="MusicNotes/Node/Box" to="MusicNotes/Node/Box" method="_on_Box_body_exited"]
+[connection signal="attack_made" from="Player" to="MusicNotes/Node/Box" method="_on_Player_attack_made"]
 [connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]
 [connection signal="body_entered" from="levelEnd" to="Player" method="_on_levelEnd_body_entered"]

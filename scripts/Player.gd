@@ -14,6 +14,8 @@ var ATTACK = false
 onready var playback = $AnimationTree.get("parameters/playback")
 var timee = 1
 
+signal attack_made
+
 func _physics_process(delta):
 	var on_floor = is_on_floor()
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
@@ -48,6 +50,7 @@ func _input(event):
 	if Input.is_action_just_pressed("attack"):
 		
 		playback.travel("attack")
+		emit_signal("attack_made")
 		ATTACK = true
 		yield(get_tree().create_timer(0,75),"timeout")
 		ATTACK = false
