@@ -86,3 +86,6 @@ func _on_levelEnd_body_entered(_body):
 
 func add_note():
 	notes += 1
+	
+func get_attack():
+	return ATTACK

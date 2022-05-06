@@ -11,6 +11,7 @@ onready var playback = $AnimationTreeBox.get("parameters/playback")
 
 func _on_Box_body_entered(body):
 	#_target = body
-	playback.travel("hit")
-	yield(get_tree().create_timer(0,4),"timeout") # 0,4 dura la animacion
-	queue_free()
+	if(body.get_attack()):
+		playback.travel("hit")
+		yield(get_tree().create_timer(0,4),"timeout") # 0,4 dura la animacion
+		queue_free()
