@@ -7,7 +7,7 @@ var JUMP_SPEED = 300
 var JUMP_FORCE = 1.2
 var GRAVITY = 500
 var POWER_UP = false
-
+var notes = 0
 var _facing_right = true
 var ATTACK = false
 
@@ -61,10 +61,14 @@ func _input(event):
 		scale.x = -1
 	if Input.is_action_just_pressed("dash"):
 		SPEED = 600
+		GRAVITY = 1000
+		JUMP_FORCE = 2.4
 		POWER_UP = true
 		yield(get_tree().create_timer(10),"timeout")
 		POWER_UP = false
 		SPEED = 300
+		GRAVITY = 500
+		JUMP_FORCE = 1.2
 	if Input.is_action_just_pressed("jump") and on_floor :
 		lineal_vel.y = -JUMP_SPEED*JUMP_FORCE
 
@@ -78,11 +82,16 @@ func _input(event):
 #		print(playback.get_current_node())
 
 
-func _on_fallzone_body_entered(body):
+func _on_fallzone_body_entered(_body):
 	get_tree().change_scene("res://scenes/Main.tscn")
 
 
 
-func _on_levelEnd_body_entered(body):
+func _on_levelEnd_body_entered(_body):
 	#In the meantime, this function just restars the level when the player enters the 2D Area
-	get_tree().change_scene("res://scenes/Main.tscn")
+	if notes >= 6:
+		get_tree().change_scene("res://scenes/Main.tscn")
+
+
+func add_note():
+	notes += 1
