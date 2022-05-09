@@ -17,6 +17,7 @@ func _on_MusicNote_body_entered(body):
 	
 var time_start = OS.get_unix_time()
 var time_now = 0
+
 func _process(delta):
 	time_now = OS.get_unix_time()
 	var time_elapsed = time_now - time_start

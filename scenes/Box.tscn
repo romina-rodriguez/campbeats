@@ -171,5 +171,3 @@ tree_root = SubResource( 20 )
 anim_player = NodePath("../AnimationBox")
 active = true
 parameters/playback = SubResource( 32 )
-
-[connection signal="body_entered" from="." to="." method="_on_Box_body_entered"]

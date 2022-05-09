@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://assets/CatSprite.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
@@ -6,6 +6,9 @@
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
 height = 5.0
+
+[sub_resource type="RectangleShape2D" id=80]
+extents = Vector2( 6.425, 3.0125 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -46,10 +49,23 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 28 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/SwordHit/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=16]
 resource_name = "attack"
 length = 0.75
+loop = true
 step = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -86,6 +102,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 23, 24, 25, 26, 27 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/SwordHit/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -436,6 +464,14 @@ scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 hframes = 28
 
+[node name="SwordHit" type="Area2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/SwordHit"]
+position = Vector2( 9.8, 5.0125 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 80 )
+disabled = true
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/attack = SubResource( 16 )
@@ -451,3 +487,5 @@ tree_root = SubResource( 53 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 54 )
+
+[connection signal="area_entered" from="Sprite/SwordHit" to="." method="_on_SwordHit_area_entered"]

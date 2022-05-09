@@ -664,6 +664,16 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 1245253, 18, 0, 1245255, 24, 0, 1245256, 24, 0, 1245257, 24, 0, 1245258, 19, 0, 1376335, 18, 0, 1376337, 25, 0, 1376338, 25, 0, 1376339, 25, 0, 1376340, 19, 0, 1441853, 18, 0, 1441855, 19, 0, 1769472, 2, 0, 1769473, 2, 0, 1769474, 2, 0, 1769475, 2, 0, 1769476, 2, 0, 1769477, 2, 0, 1769478, 2, 0, 1769479, 2, 0, 1769480, 2, 0, 1769481, 2, 0, 1769482, 2, 0, 1769483, 2, 0, 1769484, 2, 0, 1769485, 2, 0, 1769486, 2, 0, 1769487, 2, 0, 1769488, 2, 0, 1769489, 2, 0, 1769490, 2, 0, 1769491, 2, 0, 1769492, 2, 0, 1769493, 2, 0, 1769494, 2, 0, 1769495, 2, 0, 1769496, 2, 0, 1769497, 2, 0, 1769498, 2, 0, 1769499, 2, 0, 1769500, 2, 0, 1769501, 3, 0, 1769507, 1, 0, 1769508, 2, 0, 1769509, 2, 0, 1769510, 2, 0, 1769511, 2, 0, 1769512, 2, 0, 1769513, 2, 0, 1769514, 2, 0, 1769515, 2, 0, 1769516, 2, 0, 1769517, 2, 0, 1769518, 2, 0, 1769519, 2, 0, 1769520, 2, 0, 1769521, 2, 0, 1769522, 2, 0, 1769523, 2, 0, 1769524, 2, 0, 1769525, 2, 0, 1769526, 2, 0, 1769527, 2, 0, 1769528, 2, 0, 1769529, 2, 0, 1769530, 2, 0, 1769531, 2, 0, 1769532, 2, 0, 1769533, 2, 0, 1769534, 2, 0, 1769535, 2, 0, 1769536, 2, 0, 1769537, 2, 0, 1769538, 2, 0, 1769539, 2, 0, 1769540, 2, 0, 1769541, 2, 0, 1769542, 2, 0, 1769543, 2, 0, 1769544, 2, 0, 1769545, 2, 0, 1769546, 2, 0, 1769547, 2, 0, 1769548, 2, 0, 1769549, 2, 0, 1769550, 2, 0, 1769551, 2, 0, 1769552, 2, 0, 1769553, 2, 0, 1769554, 2, 0, 1769555, 2, 0, 1769556, 2, 0, 1769557, 2, 0, 1769558, 2, 0, 1769559, 2, 0, 1769560, 2, 0, 1769561, 2, 0, 1769562, 3, 0, 1769568, 1, 0, 1769569, 2, 0, 1769570, 2, 0, 1769571, 2, 0, 1769572, 2, 0, 1769573, 2, 0, 1769574, 2, 0, 1769575, 2, 0, 1769576, 2, 0, 1769577, 2, 0, 1769578, 2, 0, 1769579, 2, 0, 1769580, 2, 0, 1769581, 2, 0, 1769582, 2, 0, 1769583, 2, 0, 1769584, 2, 0, 1769585, 2, 0, 1769586, 2, 0, 1769587, 2, 0, 1769588, 2, 0, 1769589, 2, 0, 1769590, 2, 0, 1769591, 2, 0, 1769592, 2, 0, 1769593, 2, 0, 1769594, 2, 0, 1769595, 2, 0, 1769596, 2, 0, 1769597, 2, 0, 1769598, 2, 0, 1769599, 2, 0, 1769600, 2, 0, 1769601, 2, 0 )
 
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, 399 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
+limit_bottom = 900
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Blue Sky" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -753,20 +763,8 @@ position = Vector2( 1421, 758 )
 [node name="MusicNote8" parent="MusicNotes" instance=ExtResource( 3 )]
 position = Vector2( 1205, 809 )
 
-[node name="Node" type="Node" parent="MusicNotes"]
-
-[node name="Box" parent="MusicNotes/Node" instance=ExtResource( 13 )]
-position = Vector2( 525, 806 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 168, 399 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-limit_left = 0
-limit_bottom = 900
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
+[node name="Box" parent="MusicNotes" instance=ExtResource( 13 )]
+position = Vector2( 528, 808 )
 
 [node name="fallzone" type="Area2D" parent="."]
 collision_layer = 0
@@ -839,6 +837,7 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 33 )
 text = "99"
 
+[connection signal="dash_made" from="Player" to="HUD" method="_on_Player_dash_made"]
 [connection signal="note_collected" from="MusicNotes/MusicNote" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote2" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote3" to="HUD" method="_on_MusicNote_collected"]
@@ -847,8 +846,5 @@ text = "99"
 [connection signal="note_collected" from="MusicNotes/MusicNote6" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote7" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote8" to="HUD" method="_on_MusicNote_collected"]
-[connection signal="body_exited" from="MusicNotes/Node/Box" to="MusicNotes/Node/Box" method="_on_Box_body_exited"]
-[connection signal="attack_made" from="Player" to="MusicNotes/Node/Box" method="_on_Player_attack_made"]
-[connection signal="dash_made" from="Player" to="HUD" method="_on_Player_dash_made"]
 [connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]
 [connection signal="body_entered" from="levelEnd" to="Player" method="_on_levelEnd_body_entered"]

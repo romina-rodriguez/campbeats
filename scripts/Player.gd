@@ -15,7 +15,6 @@ var DASH = 3
 onready var playback = $AnimationTree.get("parameters/playback")
 var timee = 1
 
-signal attack_made
 signal dash_made
 
 func _physics_process(delta):
@@ -52,7 +51,6 @@ func _input(event):
 	if Input.is_action_just_pressed("attack"):
 		
 		playback.travel("attack")
-		emit_signal("attack_made")
 		ATTACK = true
 		yield(get_tree().create_timer(0,75),"timeout")
 		ATTACK = false
@@ -79,20 +77,17 @@ func _input(event):
 	if Input.is_action_just_pressed("jump") and on_floor :
 		lineal_vel.y = -JUMP_SPEED*JUMP_FORCE
 
-
 func _on_fallzone_body_entered(_body):
 	get_tree().change_scene("res://scenes/Main.tscn")
-
-
 
 func _on_levelEnd_body_entered(_body):
 	#In the meantime, this function just restars the level when the player enters the 2D Area
 	if notes >= 6:
 		get_tree().change_scene("res://scenes/Main.tscn")
 
-
 func add_note():
 	notes += 1
-	
-func get_attack():
-	return ATTACK
+
+func _on_SwordHit_area_entered(area):
+	if area.is_in_group("hitbox"):
+		area.take_damage()
