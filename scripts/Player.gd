@@ -10,9 +10,15 @@ var POWER_UP = false
 var notes = 0
 var _facing_right = true
 var ATTACK = false
+var DASH = 3
 
 onready var playback = $AnimationTree.get("parameters/playback")
 var timee = 1
+
+signal dash_made
+
+func _ready():
+	pass
 
 func _physics_process(delta):
 	var on_floor = is_on_floor()
@@ -59,12 +65,14 @@ func _input(event):
 	if Input.is_action_just_pressed("right") and not _facing_right:
 		_facing_right = true
 		scale.x = -1
-	if Input.is_action_just_pressed("dash"):
+	if Input.is_action_just_pressed("dash") and DASH > 0:
 		SPEED = 600
 		GRAVITY = 1000
 		JUMP_FORCE = 2.4
 		POWER_UP = true
-		yield(get_tree().create_timer(10),"timeout")
+		emit_signal("dash_made")
+		yield(get_tree().create_timer(5),"timeout")
+		DASH -= 1
 		POWER_UP = false
 		SPEED = 300
 		GRAVITY = 500
@@ -72,11 +80,8 @@ func _input(event):
 	if Input.is_action_just_pressed("jump") and on_floor :
 		lineal_vel.y = -JUMP_SPEED*JUMP_FORCE
 
-
 func _on_fallzone_body_entered(_body):
 	get_tree().change_scene("res://scenes/Lose.tscn")
-
-
 
 func _on_levelEnd_body_entered(_body):
 	#In the meantime, this function just restars the level when the player enters the 2D Area
@@ -86,8 +91,16 @@ func _on_levelEnd_body_entered(_body):
 		get_tree().change_scene("res://scenes/Lose.tscn")
 
 
-func add_note():
+func _on_SwordHit_area_entered(area):
+	if area.is_in_group("hitbox"):
+		area.take_damage()
+
+
+func _on_Box_note_collected():
 	notes += 1
-	
-func get_attack():
-	return ATTACK
+	_ready()
+
+
+func _on_MusicNote8_note_collected():
+	notes += 1
+	_ready()
