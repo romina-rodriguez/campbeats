@@ -143,6 +143,7 @@ states/idle/position = Vector2( 487, 121 )
 transitions = [ "idle", "available", SubResource( 12 ), "available", "get", SubResource( 17 ) ]
 start_node = "idle"
 end_node = "get"
+graph_offset = Vector2( 122.048, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=14]
 
@@ -155,11 +156,12 @@ scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -24, -29.7072 )
+position = Vector2( -24, -32.3251 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 centered = false
 hframes = 2
+frame = 1
 
 [node name="SoundCollect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
