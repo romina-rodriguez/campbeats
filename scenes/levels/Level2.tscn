@@ -1,18 +1,18 @@
 [gd_scene load_steps=45 format=2]
 
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" type="Texture" id=2]
-[ext_resource path="res://scenes/MusicNote.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=4]
-[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" type="Texture" id=5]
-[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" type="Texture" id=6]
-[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" type="Texture" id=7]
-[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" type="Texture" id=8]
-[ext_resource path="res://scripts/HUD.gd" type="Script" id=9]
-[ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=10]
-[ext_resource path="res://assets/note.png" type="Texture" id=11]
-[ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" type="Texture" id=4]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" type="Texture" id=5]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" type="Texture" id=6]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" type="Texture" id=7]
+[ext_resource path="res://assets/note.png" type="Texture" id=8]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/MusicNote.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -94,7 +94,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 
 [sub_resource type="TileSet" id=2]
 0/name = "Terrain (16 x 16).png 0"
-0/texture = ExtResource( 8 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 64, 128, 16, 16 )
@@ -115,7 +115,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 0/z_index = 0
 1/name = "Terrain (16 x 16).png 1"
-1/texture = ExtResource( 8 )
+1/texture = ExtResource( 6 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 48, 16, 16, 32 )
@@ -136,7 +136,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 1/z_index = 0
 2/name = "Terrain (16 x 16).png 2"
-2/texture = ExtResource( 8 )
+2/texture = ExtResource( 6 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 64, 16, 16, 32 )
@@ -157,7 +157,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 2/z_index = 0
 3/name = "Terrain (16 x 16).png 3"
-3/texture = ExtResource( 8 )
+3/texture = ExtResource( 6 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 80, 16, 16, 32 )
@@ -178,7 +178,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 3/z_index = 0
 4/name = "Terrain (16 x 16).png 4"
-4/texture = ExtResource( 8 )
+4/texture = ExtResource( 6 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 96, 48, 16, 32 )
@@ -199,7 +199,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 4/z_index = 0
 5/name = "Terrain (16 x 16).png 5"
-5/texture = ExtResource( 8 )
+5/texture = ExtResource( 6 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 112, 48, 16, 32 )
@@ -220,7 +220,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 5/z_index = 0
 6/name = "Terrain (16 x 16).png 6"
-6/texture = ExtResource( 8 )
+6/texture = ExtResource( 6 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 32, 48, 16, 32 )
@@ -241,7 +241,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 6/z_index = 0
 7/name = "Terrain (16 x 16).png 7"
-7/texture = ExtResource( 8 )
+7/texture = ExtResource( 6 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 16, 48, 16, 32 )
@@ -262,7 +262,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 7/z_index = 0
 8/name = "Terrain (16 x 16).png 8"
-8/texture = ExtResource( 8 )
+8/texture = ExtResource( 6 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 48, 48, 16, 32 )
@@ -283,7 +283,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 8/z_index = 0
 9/name = "Terrain (16 x 16).png 9"
-9/texture = ExtResource( 8 )
+9/texture = ExtResource( 6 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 64, 48, 16, 32 )
@@ -304,7 +304,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 9/z_index = 0
 10/name = "Terrain (16 x 16).png 10"
-10/texture = ExtResource( 8 )
+10/texture = ExtResource( 6 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 80, 48, 16, 32 )
@@ -325,7 +325,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 10/z_index = 0
 11/name = "Terrain (16 x 16).png 11"
-11/texture = ExtResource( 8 )
+11/texture = ExtResource( 6 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 80, 64, 32, 32 )
@@ -346,7 +346,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 11/z_index = 0
 12/name = "Terrain (16 x 16).png 12"
-12/texture = ExtResource( 8 )
+12/texture = ExtResource( 6 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 32, 64, 32, 32 )
@@ -367,7 +367,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 12/z_index = 0
 13/name = "Terrain (16 x 16).png 13"
-13/texture = ExtResource( 8 )
+13/texture = ExtResource( 6 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 48, 96, 16, 16 )
@@ -388,7 +388,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 13/z_index = 0
 14/name = "Terrain (16 x 16).png 14"
-14/texture = ExtResource( 8 )
+14/texture = ExtResource( 6 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 80, 96, 16, 16 )
@@ -409,7 +409,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 14/z_index = 0
 15/name = "Terrain (16 x 16).png 15"
-15/texture = ExtResource( 8 )
+15/texture = ExtResource( 6 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 64, 96, 16, 16 )
@@ -430,7 +430,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 15/z_index = 0
 16/name = "Terrain (16 x 16).png 16"
-16/texture = ExtResource( 8 )
+16/texture = ExtResource( 6 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 240, 48, 16, 16 )
@@ -451,7 +451,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 16/z_index = 0
 17/name = "Terrain (16 x 16).png 17"
-17/texture = ExtResource( 8 )
+17/texture = ExtResource( 6 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 176, 16, 16, 16 )
@@ -472,7 +472,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 17/z_index = 0
 18/name = "Terrain (16 x 16).png 18"
-18/texture = ExtResource( 8 )
+18/texture = ExtResource( 6 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 144, 48, 32, 16 )
@@ -493,7 +493,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 18/z_index = 0
 19/name = "Terrain (16 x 16).png 19"
-19/texture = ExtResource( 8 )
+19/texture = ExtResource( 6 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 192, 48, 32, 16 )
@@ -514,7 +514,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 19/z_index = 0
 20/name = "Terrain (16 x 16).png 20"
-20/texture = ExtResource( 8 )
+20/texture = ExtResource( 6 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 176, 80, 16, 16 )
@@ -535,7 +535,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 20/z_index = 0
 21/name = "Terrain (16 x 16).png 21"
-21/texture = ExtResource( 8 )
+21/texture = ExtResource( 6 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 176, 32, 16, 16 )
@@ -556,7 +556,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 21/z_index = 0
 22/name = "Terrain (16 x 16).png 22"
-22/texture = ExtResource( 8 )
+22/texture = ExtResource( 6 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 176, 48, 16, 16 )
@@ -577,7 +577,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 22/z_index = 0
 23/name = "Terrain (16 x 16).png 23"
-23/texture = ExtResource( 8 )
+23/texture = ExtResource( 6 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 176, 64, 16, 16 )
@@ -598,7 +598,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 23/z_index = 0
 24/name = "Terrain (16 x 16).png 24"
-24/texture = ExtResource( 8 )
+24/texture = ExtResource( 6 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 160, 48, 16, 16 )
@@ -619,7 +619,7 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 0, 16, 0 )
 } ]
 24/z_index = 0
 25/name = "Terrain (16 x 16).png 25"
-25/texture = ExtResource( 8 )
+25/texture = ExtResource( 6 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 192, 48, 16, 16 )
@@ -651,7 +651,7 @@ extents = Vector2( 25.125, 60.5 )
 
 [sub_resource type="DynamicFont" id=33]
 size = 60
-font_data = ExtResource( 10 )
+font_data = ExtResource( 1 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -671,7 +671,7 @@ motion_mirroring = Vector2( 1296, 936 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Blue Sky"]
 position = Vector2( -7, -12 )
 scale = Vector2( 4.5, 4.5 )
-texture = ExtResource( 2 )
+texture = ExtResource( 7 )
 centered = false
 
 [node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -680,7 +680,7 @@ motion_mirroring = Vector2( 1296, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds"]
 scale = Vector2( 4.5, 4.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="Clouds cover" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -689,7 +689,7 @@ motion_mirroring = Vector2( 1296, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds cover"]
 scale = Vector2( 4.5, 4.5 )
-texture = ExtResource( 5 )
+texture = ExtResource( 2 )
 centered = false
 
 [node name="Hills" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -698,7 +698,7 @@ motion_mirroring = Vector2( 1296, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Hills"]
 scale = Vector2( 4.5, 4.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 centered = false
 
 [node name="Foreground Scene" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -707,10 +707,10 @@ motion_mirroring = Vector2( 1296, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Foreground Scene"]
 scale = Vector2( 4.5, 4.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 centered = false
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 168, 399 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -738,34 +738,34 @@ shape = SubResource( 3 )
 
 [node name="MusicNotes" type="Node" parent="."]
 
-[node name="MusicNote" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 822, 786 )
 
-[node name="MusicNote2" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote2" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 666, 770 )
 
-[node name="MusicNote3" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote3" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 1592, 805 )
 
-[node name="MusicNote4" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote4" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 2014, 658 )
 
-[node name="MusicNote5" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote5" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 2651, 625 )
 
-[node name="MusicNote6" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote6" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 2335, 547 )
 
-[node name="MusicNote7" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote7" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 1421, 758 )
 
-[node name="MusicNote8" parent="MusicNotes" instance=ExtResource( 3 )]
+[node name="MusicNote8" parent="MusicNotes" instance=ExtResource( 12 )]
 position = Vector2( 1205, 809 )
 
 [node name="Node" type="Node" parent="MusicNotes"]
 
-[node name="Box" parent="MusicNotes/Node" instance=ExtResource( 13 )]
-position = Vector2( 525, 806 )
+[node name="Box" parent="MusicNotes/Node" instance=ExtResource( 11 )]
+position = Vector2( 464, 792 )
 
 [node name="fallzone" type="Area2D" parent="."]
 collision_layer = 0
@@ -787,18 +787,18 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Checkpoint" parent="levelEnd" instance=ExtResource( 12 )]
+[node name="Checkpoint" parent="levelEnd" instance=ExtResource( 10 )]
 position = Vector2( 3325, 736 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource( 9 )
+script = ExtResource( 13 )
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
 margin_left = 32.0
 margin_top = 29.0
 margin_right = 95.0
 margin_bottom = 97.0
-texture = ExtResource( 11 )
+texture = ExtResource( 8 )
 expand = true
 
 [node name="Label" type="Label" parent="HUD"]
