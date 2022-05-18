@@ -17,7 +17,8 @@ func _on_MusicNote_collected():
 
 
 func _on_Player_dash_made():
-	dash -= 1
+	if dash > 0:
+		dash -= 1
 	_ready()
 
 
