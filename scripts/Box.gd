@@ -9,7 +9,9 @@ func _ready():
 
 func take_damage():
 	playback.travel("hit")
-	yield(get_tree().create_timer(0,4),"timeout") # 0,4 dura la animacion
+	playback.travel("note")
 	emit_signal("note_collected")
 	#$SoundCollect.play()
-	queue_free()
+
+
+

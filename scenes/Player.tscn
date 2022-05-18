@@ -463,12 +463,12 @@ position = Vector2( 11, 0 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 hframes = 28
+frame = 16
 
 [node name="SwordHit" type="Area2D" parent="Sprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/SwordHit"]
 position = Vector2( 9.8, 5.0125 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 80 )
 disabled = true
 
