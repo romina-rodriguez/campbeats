@@ -156,7 +156,11 @@ scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
+<<<<<<< HEAD
+position = Vector2( -24, -31.0294 )
+=======
 position = Vector2( -24, -32.3251 )
+>>>>>>> ccde3ea5cf6d2fa1af582ab21630df9c69080e82
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 centered = false
