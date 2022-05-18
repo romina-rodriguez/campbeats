@@ -19,3 +19,8 @@ func _on_MusicNote_collected():
 func _on_Player_dash_made():
 	dash -= 1
 	_ready()
+
+
+func _on_Box_note_collected():
+	notes += 1
+	_ready()

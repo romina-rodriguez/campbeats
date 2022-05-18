@@ -17,6 +17,9 @@ var timee = 1
 
 signal dash_made
 
+func _ready():
+	pass
+
 func _physics_process(delta):
 	var on_floor = is_on_floor()
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
@@ -85,9 +88,17 @@ func _on_levelEnd_body_entered(_body):
 	if notes >= 6:
 		get_tree().change_scene("res://scenes/Main.tscn")
 
-func add_note():
-	notes += 1
 
 func _on_SwordHit_area_entered(area):
 	if area.is_in_group("hitbox"):
 		area.take_damage()
+
+
+func _on_Box_note_collected():
+	notes += 1
+	_ready()
+
+
+func _on_MusicNote8_note_collected():
+	notes += 1
+	_ready()
