@@ -74,14 +74,16 @@ func _input(event):
 
 
 func _on_fallzone_body_entered(_body):
-	get_tree().change_scene("res://scenes/Main.tscn")
+	get_tree().change_scene("res://scenes/Lose.tscn")
 
 
 
 func _on_levelEnd_body_entered(_body):
 	#In the meantime, this function just restars the level when the player enters the 2D Area
 	if notes >= 6:
-		get_tree().change_scene("res://scenes/Main.tscn")
+		get_tree().change_scene("res://scenes/Win.tscn")
+	else:
+		get_tree().change_scene("res://scenes/Lose.tscn")
 
 
 func add_note():
