@@ -98,3 +98,7 @@ func _on_SwordHit_area_entered(area):
 	if area.is_in_group("hitbox"):
 		area.take_damage()
 		add_note()
+
+
+func _on_MusicNote_collected():
+	pass # Replace with function body.
