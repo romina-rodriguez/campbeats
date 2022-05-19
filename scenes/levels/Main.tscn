@@ -727,7 +727,7 @@ centered = false
 position = Vector2( 1, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLimits/Wall2"]
-position = Vector2( 3756, 587 )
+position = Vector2( 3575, 585 )
 shape = SubResource( 3 )
 
 [node name="Wall3" type="StaticBody2D" parent="CollisionLimits"]
@@ -764,7 +764,7 @@ position = Vector2( 1421, 758 )
 position = Vector2( 1205, 809 )
 
 [node name="Box" parent="MusicNotes" instance=ExtResource( 13 )]
-position = Vector2( 528, 808 )
+position = Vector2( 529, 825 )
 
 [node name="fallzone" type="Area2D" parent="."]
 collision_layer = 0
@@ -845,9 +845,7 @@ text = "99"
 [connection signal="note_collected" from="MusicNotes/MusicNote5" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote6" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote7" to="HUD" method="_on_MusicNote_collected"]
-[connection signal="note_collected" from="MusicNotes/MusicNote8" to="Player" method="_on_MusicNote8_note_collected"]
 [connection signal="note_collected" from="MusicNotes/MusicNote8" to="HUD" method="_on_MusicNote_collected"]
-[connection signal="note_collected" from="MusicNotes/Box" to="Player" method="_on_Box_note_collected"]
 [connection signal="note_collected" from="MusicNotes/Box" to="HUD" method="_on_Box_note_collected"]
 [connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]
 [connection signal="body_entered" from="levelEnd" to="Player" method="_on_levelEnd_body_entered"]

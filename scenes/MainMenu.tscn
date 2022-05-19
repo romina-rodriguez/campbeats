@@ -95,9 +95,9 @@ texture = ExtResource( 5 )
 expand = true
 
 [node name="Title" type="Label" parent="Background"]
-margin_top = 124.0
+margin_top = 56.0
 margin_right = 1152.0
-margin_bottom = 388.0
+margin_bottom = 320.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Rhythm Quest"
@@ -107,9 +107,9 @@ valign = 1
 [node name="Demo" type="Label" parent="Background"]
 modulate = Color( 0, 0, 0, 1 )
 margin_left = 448.0
-margin_top = 320.0
+margin_top = 252.0
 margin_right = 712.0
-margin_bottom = 384.0
+margin_bottom = 316.0
 custom_fonts/font = SubResource( 3 )
 text = "Demo :)"
 align = 1
@@ -120,9 +120,9 @@ margin_bottom = 40.0
 
 [node name="play" type="Button" parent="Buttons"]
 margin_left = 384.0
-margin_top = 392.0
+margin_top = 352.0
 margin_right = 768.0
-margin_bottom = 503.0
+margin_bottom = 463.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -163,25 +163,25 @@ position = Vector2( 576, 624 )
 [node name="notes" type="Node" parent="ControlsDemo"]
 
 [node name="MusicNote2" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
-position = Vector2( 1056, 400 )
+position = Vector2( 1056, 332 )
 rotation = 0.0488692
 scale = Vector2( 2, 2 )
 input_pickable = false
 
 [node name="MusicNote4" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
-position = Vector2( 352, 472 )
+position = Vector2( 352, 404 )
 rotation = 0.113446
 scale = Vector2( 2, 2 )
 input_pickable = false
 
 [node name="MusicNote5" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
-position = Vector2( 128, 400 )
+position = Vector2( 128, 332 )
 rotation = -0.120428
 scale = Vector2( 2, 2 )
 input_pickable = false
 
 [node name="MusicNote6" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
-position = Vector2( 848, 472 )
+position = Vector2( 848, 404 )
 rotation = -0.178024
 scale = Vector2( 2, 2 )
 input_pickable = false
@@ -214,9 +214,9 @@ shape = SubResource( 6 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 40.0
-margin_top = 520.0
+margin_top = 504.0
 margin_right = 456.0
-margin_bottom = 768.0
+margin_bottom = 752.0
 custom_styles/panel = SubResource( 7 )
 
 [node name="Label" type="Label" parent="Panel"]
@@ -407,7 +407,7 @@ expand = true
 
 [node name="MusicMainMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = -16.421
+volume_db = 2.0
 autoplay = true
 
 [connection signal="pressed" from="Buttons/play" to="." method="_on_play_pressed"]

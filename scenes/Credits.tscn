@@ -97,9 +97,9 @@ flat = true
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 64.0
-margin_top = 216.0
+margin_top = 224.0
 margin_right = 1088.0
-margin_bottom = 744.0
+margin_bottom = 752.0
 custom_styles/panel = SubResource( 7 )
 
 [node name="Label" type="Label" parent="Panel"]

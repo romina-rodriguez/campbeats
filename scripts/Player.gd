@@ -13,7 +13,7 @@ var ATTACK = false
 var DASH = 3
 
 onready var playback = $AnimationTree.get("parameters/playback")
-var timee = 1
+var time = 1
 
 signal dash_made
 
@@ -91,16 +91,10 @@ func _on_levelEnd_body_entered(_body):
 		get_tree().change_scene("res://scenes/Lose.tscn")
 
 
+func add_note():
+	notes += 1
+
 func _on_SwordHit_area_entered(area):
 	if area.is_in_group("hitbox"):
 		area.take_damage()
-
-
-func _on_Box_note_collected():
-	notes += 1
-	_ready()
-
-
-func _on_MusicNote8_note_collected():
-	notes += 1
-	_ready()
+		add_note()
