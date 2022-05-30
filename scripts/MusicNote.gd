@@ -21,9 +21,13 @@ var time_now = 0
 func _process(delta):
 	time_now = OS.get_unix_time()
 	var time_elapsed = time_now - time_start
-	if(TIME<time_elapsed and ACTIVATE == false):
+	if(TIME<time_elapsed and ACTIVATE == false and TIME!=0):
 		ACTIVATE=true
 		playback.travel("available")
+	if(time_elapsed==30 and ACTIVATE == true):
+		ACTIVATE=false
+		TIME=0
+		playback.travel("idle")
 		
 func _on_CollectNote_animation_finished(anim_name):
 	queue_free()

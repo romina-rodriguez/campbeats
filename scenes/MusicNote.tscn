@@ -143,7 +143,7 @@ states/idle/position = Vector2( 487, 121 )
 transitions = [ "idle", "available", SubResource( 12 ), "available", "get", SubResource( 17 ) ]
 start_node = "idle"
 end_node = "get"
-graph_offset = Vector2( 122.048, 0 )
+graph_offset = Vector2( 263.979, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=14]
 
@@ -156,7 +156,7 @@ scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -24, -37.1196 )
+position = Vector2( -24, -32.2648 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 centered = false
