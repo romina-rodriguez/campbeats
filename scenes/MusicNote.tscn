@@ -5,8 +5,8 @@
 [ext_resource path="res://assets/Sounds/nota musical/8bit-game-type-single-note_C.wav" type="AudioStream" id=3]
 
 [sub_resource type="CapsuleShape2D" id=3]
-radius = 6.66667
-height = 4.66667
+radius = 8.66667
+height = 4.0
 
 [sub_resource type="Animation" id=8]
 length = 0.001
@@ -151,17 +151,16 @@ graph_offset = Vector2( 263.979, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 2 )
+position = Vector2( 23, 26 )
 scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -24, -32.503 )
-scale = Vector2( 2, 2 )
+position = Vector2( -24, -25.3305 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 centered = false
 hframes = 2
-frame = 1
 
 [node name="SoundCollect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
