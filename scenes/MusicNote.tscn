@@ -151,12 +151,12 @@ graph_offset = Vector2( 263.979, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -3 )
+position = Vector2( 1, 2 )
 scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -24, -32.2648 )
+position = Vector2( -24, -32.503 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 centered = false
