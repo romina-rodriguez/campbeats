@@ -1,0 +1,288 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/Levels.gd" type="Script" id=3]
+[ext_resource path="res://assets/Sounds/mixkit-achievement-bell-600.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" type="Texture" id=6]
+[ext_resource path="res://assets/Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" type="Texture" id=7]
+[ext_resource path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" type="Texture" id=8]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 154
+outline_size = 8
+outline_color = Color( 0.968627, 0.87451, 0.411765, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.164706, 0.447059, 0.713726, 0.203922 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=2]
+size = 83
+font_data = ExtResource( 2 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 48, 48, 16, 48, 16, 48, 48, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 48, 48, 16, 48, 16, 48, 48, 48 )
+
+[sub_resource type="TileSet" id=10]
+0/name = "Tropics_entities (16 x 16).png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 16, 48, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Grassland_entities (16 x 16).png 1"
+1/texture = ExtResource( 9 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 144, 16, 48, 48 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 12 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Grassland_entities (16 x 16).png 2"
+2/texture = ExtResource( 9 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 80, 16, 48, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Autumn_entities (16 x 16).png 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 16, 16, 48, 48 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 13 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Winter_entities (16 x 16).png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 16, 16, 48, 48 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[node name="Levels" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 1152.0
+margin_bottom = 832.0
+color = Color( 0.709804, 0.870588, 1, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_left = -144.0
+margin_top = -80.0
+margin_right = 1336.0
+margin_bottom = 968.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+margin_left = -192.0
+margin_top = -336.0
+margin_right = 1288.0
+margin_bottom = 712.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+margin_left = -152.0
+margin_top = 328.0
+margin_right = 1328.0
+margin_bottom = 1376.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Title" type="Label" parent="Background"]
+margin_right = 1152.0
+margin_bottom = 264.0
+custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Levels"
+align = 1
+valign = 1
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Buttons"]
+margin_left = 192.0
+margin_top = 240.0
+margin_right = 544.0
+margin_bottom = 408.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Level 1" type="Button" parent="Buttons"]
+margin_left = 192.0
+margin_top = 240.0
+margin_right = 544.0
+margin_bottom = 408.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Level   1"
+flat = true
+expand_icon = true
+
+[node name="Panel2" type="Panel" parent="Buttons"]
+margin_left = 608.0
+margin_top = 240.0
+margin_right = 960.0
+margin_bottom = 408.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Level 2" type="Button" parent="Buttons"]
+margin_left = 608.0
+margin_top = 240.0
+margin_right = 961.0
+margin_bottom = 408.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Level   2"
+flat = true
+expand_icon = true
+
+[node name="Panel3" type="Panel" parent="Buttons"]
+margin_left = 192.0
+margin_top = 424.0
+margin_right = 544.0
+margin_bottom = 592.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Level 3" type="Button" parent="Buttons"]
+margin_left = 192.0
+margin_top = 424.0
+margin_right = 544.0
+margin_bottom = 592.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Level   3"
+flat = true
+expand_icon = true
+
+[node name="Panel4" type="Panel" parent="Buttons"]
+margin_left = 608.0
+margin_top = 424.0
+margin_right = 960.0
+margin_bottom = 592.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Level 4" type="Button" parent="Buttons"]
+margin_left = 608.0
+margin_top = 424.0
+margin_right = 960.0
+margin_bottom = 592.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Level   4"
+flat = true
+expand_icon = true
+
+[node name="Panel5" type="Panel" parent="Buttons"]
+margin_left = 192.0
+margin_top = 608.0
+margin_right = 544.0
+margin_bottom = 776.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Level 5" type="Button" parent="Buttons"]
+margin_left = 192.0
+margin_top = 608.0
+margin_right = 544.0
+margin_bottom = 776.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Level   5"
+flat = true
+expand_icon = true
+
+[node name="MusicLevels" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -0.016
+autoplay = true
+
+[node name="TreesMap" type="TileMap" parent="."]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 10, 10 )
+format = 1
+tile_data = PoolIntArray( 1966122, 1, 0, 1966163, 2, 0, 3145769, 3, 0, 3145811, 4, 0, 4325417, 0, 0 )
+
+[connection signal="pressed" from="Buttons/Level 1" to="." method="_on_Level_1_pressed"]
+[connection signal="pressed" from="Buttons/Level 2" to="." method="_on_Level_2_pressed"]
+[connection signal="pressed" from="Buttons/Level 3" to="." method="_on_Level_3_pressed"]
+[connection signal="pressed" from="Buttons/Level 4" to="." method="_on_Level_4_pressed"]
+[connection signal="pressed" from="Buttons/Level 5" to="." method="_on_Level_5_pressed"]

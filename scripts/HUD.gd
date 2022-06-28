@@ -25,3 +25,7 @@ func _on_Player_dash_made():
 func _on_Box_note_collected():
 	notes += 1
 	_ready()
+
+
+func _on_Menu_pressed():
+	get_tree().change_scene("res://scenes/Menu.tscn")
