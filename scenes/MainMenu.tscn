@@ -1,8 +1,7 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://assets/Fonts/Mayin's Hand.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/MusicNote.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=5]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=6]
@@ -16,10 +15,6 @@ outline_size = 8
 outline_color = Color( 0.968627, 0.87451, 0.411765, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 35
-font_data = ExtResource( 3 )
-
 [sub_resource type="DynamicFont" id=2]
 size = 100
 font_data = ExtResource( 2 )
@@ -32,7 +27,7 @@ font_data = ExtResource( 2 )
 extents = Vector2( 14.5, 95.25 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 140.5, 10 )
+extents = Vector2( 294.25, 10 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.164706, 0.447059, 0.713726, 0.203922 )
@@ -104,25 +99,15 @@ text = "Rhythm Quest"
 align = 1
 valign = 1
 
-[node name="Demo" type="Label" parent="Background"]
-modulate = Color( 0, 0, 0, 1 )
-margin_left = 448.0
-margin_top = 252.0
-margin_right = 712.0
-margin_bottom = 316.0
-custom_fonts/font = SubResource( 3 )
-text = "Demo :)"
-align = 1
-
 [node name="Buttons" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="play" type="Button" parent="Buttons"]
-margin_left = 384.0
-margin_top = 352.0
-margin_right = 768.0
-margin_bottom = 463.0
+margin_left = 376.0
+margin_top = 248.0
+margin_right = 760.0
+margin_bottom = 359.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -132,9 +117,9 @@ flat = true
 expand_icon = true
 
 [node name="credits" type="Button" parent="Buttons"]
-margin_left = 936.0
+margin_left = 920.0
 margin_top = 768.0
-margin_right = 1128.0
+margin_right = 1112.0
 margin_bottom = 813.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
@@ -144,9 +129,9 @@ text = "credits :)"
 flat = true
 
 [node name="exit" type="Button" parent="Buttons"]
-margin_left = 32.0
+margin_left = 64.0
 margin_top = 768.0
-margin_right = 176.0
+margin_right = 184.0
 margin_bottom = 813.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
@@ -158,7 +143,7 @@ flat = true
 [node name="ControlsDemo" type="Node" parent="."]
 
 [node name="Player" parent="ControlsDemo" instance=ExtResource( 6 )]
-position = Vector2( 576, 624 )
+position = Vector2( 792, 640 )
 
 [node name="notes" type="Node" parent="ControlsDemo"]
 
@@ -191,32 +176,32 @@ input_pickable = false
 [node name="StaticBody2D2" type="StaticBody2D" parent="ControlsDemo/limits"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D2"]
-position = Vector2( 768, 608 )
+position = Vector2( 1072, 608 )
 shape = SubResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ControlsDemo/limits"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D"]
-position = Vector2( 480, 608 )
+position = Vector2( 544, 611 )
 shape = SubResource( 5 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="ControlsDemo/limits"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D3"]
-position = Vector2( 624, 520 )
+position = Vector2( 792, 496 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="ControlsDemo/limits"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D4"]
-position = Vector2( 632, 704 )
+position = Vector2( 784, 720 )
 shape = SubResource( 6 )
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 40.0
-margin_top = 504.0
-margin_right = 456.0
-margin_bottom = 752.0
+margin_left = 64.0
+margin_top = 480.0
+margin_right = 480.0
+margin_bottom = 728.0
 custom_styles/panel = SubResource( 7 )
 
 [node name="Label" type="Label" parent="Panel"]
@@ -248,26 +233,26 @@ text = "Attack"
 
 [node name="Label5" type="Label" parent="Panel"]
 margin_left = 24.0
-margin_top = 208.0
+margin_top = 200.0
 margin_right = 107.0
-margin_bottom = 235.0
+margin_bottom = 227.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 9 )
 text = "Dash"
 
 [node name="Label4" type="Label" parent="Panel"]
-margin_left = 32.0
+margin_left = 24.0
 margin_top = 104.0
-margin_right = 89.0
+margin_right = 81.0
 margin_bottom = 131.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 9 )
 text = "Jump"
 
 [node name="Label6" type="Label" parent="Panel"]
-margin_left = 216.0
+margin_left = 248.0
 margin_top = 56.0
-margin_right = 273.0
+margin_right = 305.0
 margin_bottom = 83.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 9 )
@@ -283,9 +268,9 @@ custom_fonts/font = SubResource( 9 )
 text = "or"
 
 [node name="Panel" type="Panel" parent="Panel"]
-margin_left = 112.0
+margin_left = 144.0
 margin_top = 48.0
-margin_right = 152.0
+margin_right = 184.0
 margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 
@@ -299,9 +284,9 @@ align = 1
 valign = 1
 
 [node name="Panel2" type="Panel" parent="Panel"]
-margin_left = 160.0
+margin_left = 192.0
 margin_top = 48.0
-margin_right = 200.0
+margin_right = 232.0
 margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 
@@ -332,14 +317,15 @@ valign = 1
 
 [node name="Panel7" type="Panel" parent="Panel"]
 margin_left = 144.0
-margin_top = 152.0
+margin_top = 145.0
 margin_right = 336.0
-margin_bottom = 192.0
+margin_bottom = 185.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="Label11" type="Label" parent="Panel/Panel7"]
 margin_right = 192.0
 margin_bottom = 40.0
+rect_pivot_offset = Vector2( 152, 31 )
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 9 )
 text = "SPACE"
@@ -347,10 +333,10 @@ align = 1
 valign = 1
 
 [node name="Panel8" type="Panel" parent="Panel"]
-margin_left = 112.0
-margin_top = 200.0
-margin_right = 208.0
-margin_bottom = 240.0
+margin_left = 144.0
+margin_top = 192.0
+margin_right = 240.0
+margin_bottom = 231.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="Label12" type="Label" parent="Panel/Panel8"]
@@ -379,9 +365,9 @@ texture = ExtResource( 7 )
 expand = true
 
 [node name="Panel3" type="Panel" parent="Panel"]
-margin_left = 256.0
+margin_left = 288.0
 margin_top = 48.0
-margin_right = 296.0
+margin_right = 328.0
 margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 
@@ -393,9 +379,9 @@ expand = true
 flip_h = true
 
 [node name="Panel4" type="Panel" parent="Panel"]
-margin_left = 304.0
+margin_left = 344.0
 margin_top = 48.0
-margin_right = 344.0
+margin_right = 384.0
 margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 

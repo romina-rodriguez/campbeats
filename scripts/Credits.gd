@@ -7,4 +7,4 @@ func _on_back_pressed():
 
 
 func _on_LinkButton_pressed():
-	OS.shell_open("https://ocdn.eu/pulscms-transforms/1/45Gk9kpTURBXy84OGMxMGRhYzVjZjA3MTViN2YzYzBhYmNhYTFiMWZiZC5qcGeSlQMAAM0FAM0C0JMFzQMUzQG8gqEwBaExAA")
+	OS.shell_open("https://lhteam.itch.io/finn-sprite")

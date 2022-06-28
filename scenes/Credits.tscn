@@ -84,15 +84,15 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="back" type="Button" parent="Buttons"]
-margin_left = 32.0
+margin_left = 64.0
 margin_top = 768.0
-margin_right = 176.0
+margin_right = 200.0
 margin_bottom = 813.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "back uwu"
+text = "go back"
 flat = true
 
 [node name="Panel" type="Panel" parent="."]
@@ -103,29 +103,137 @@ margin_bottom = 752.0
 custom_styles/panel = SubResource( 7 )
 
 [node name="Label" type="Label" parent="Panel"]
-margin_top = 8.0
+margin_left = 40.0
+margin_top = 16.0
 margin_right = 1024.0
-margin_bottom = 53.0
+margin_bottom = 61.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 8 )
-text = "Here goes something hehe"
-align = 1
+text = "Sprites"
 
 [node name="Links" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="LinkButton" type="LinkButton" parent="Links"]
-margin_left = 128.0
+margin_left = 104.0
 margin_top = 296.0
-margin_right = 383.0
+margin_right = 359.0
 margin_bottom = 326.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
-custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 9 )
 action_mode = 0
-text = "some link to something"
+text = "Jimmy Sprite"
+underline = 1
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 64.0
+margin_top = 224.0
+margin_right = 1088.0
+margin_bottom = 752.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="Panel2"]
+margin_left = 40.0
+margin_top = 128.0
+margin_right = 1024.0
+margin_bottom = 173.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Music"
+
+[node name="Links2" type="Control" parent="Panel2"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel2/Links2"]
+margin_left = 104.0
+margin_top = 408.0
+margin_right = 359.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 9 )
+action_mode = 0
+text = "Chiptune Music Loops"
+underline = 1
+
+[node name="Panel3" type="Panel" parent="."]
+margin_left = 64.0
+margin_top = 224.0
+margin_right = 1088.0
+margin_bottom = 752.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="Panel3"]
+margin_left = 40.0
+margin_top = 232.0
+margin_right = 1024.0
+margin_bottom = 277.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Font"
+
+[node name="Links3" type="Control" parent="Panel3"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel3/Links3"]
+margin_left = 104.0
+margin_top = 512.0
+margin_right = 359.0
+margin_bottom = 542.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 9 )
+action_mode = 0
+text = "Fat Pix Font"
+underline = 1
+
+[node name="Panel4" type="Panel" parent="."]
+margin_left = 64.0
+margin_top = 224.0
+margin_right = 1088.0
+margin_bottom = 752.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="Panel4"]
+margin_left = 40.0
+margin_top = 336.0
+margin_right = 1024.0
+margin_bottom = 381.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Assets"
+
+[node name="Links4" type="Control" parent="Panel4"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel4/Links4"]
+margin_left = 112.0
+margin_top = 616.0
+margin_right = 367.0
+margin_bottom = 646.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 9 )
+action_mode = 0
+text = "Seasonal Tileset"
 underline = 1
 
 [node name="MusicCredits" type="AudioStreamPlayer" parent="."]
@@ -135,3 +243,6 @@ autoplay = true
 
 [connection signal="pressed" from="Buttons/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Links/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="Panel2/Links2/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="Panel3/Links3/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="Panel4/Links4/LinkButton" to="." method="_on_LinkButton_pressed"]
