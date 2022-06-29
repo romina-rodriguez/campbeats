@@ -6,7 +6,7 @@ func _ready():
 
 
 func _on_play_pressed():
-	get_tree().change_scene("res://scenes/levels/Main.tscn")
+	get_tree().change_scene("res://scenes/levels/level1/Main.tscn")
 
 
 func _on_exit_pressed():

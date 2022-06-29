@@ -80,17 +80,6 @@ func _input(event):
 	if Input.is_action_just_pressed("jump") and on_floor :
 		lineal_vel.y = -JUMP_SPEED*JUMP_FORCE
 
-func _on_fallzone_body_entered(_body):
-	get_tree().change_scene("res://scenes/Lose.tscn")
-
-func _on_levelEnd_body_entered(_body):
-	#In the meantime, this function just restars the level when the player enters the 2D Area
-	if notes >= 6:
-		get_tree().change_scene("res://scenes/Win.tscn")
-	else:
-		get_tree().change_scene("res://scenes/Lose.tscn")
-
-
 func add_note():
 	notes += 1
 
@@ -99,6 +88,75 @@ func _on_SwordHit_area_entered(area):
 		area.take_damage()
 		add_note()
 
-
 func _on_MusicNote_collected():
 	pass # Replace with function body.
+
+# LEVEL 5
+
+func _on_fallzone_body_entered5(body):
+	get_tree().change_scene("res://scenes/levels/level5/Lose5.tscn")
+
+func _on_Menu_pressed5():
+	get_tree().change_scene("res://scenes/levels/level5/Menu5.tscn")
+
+func _on_levelEnd_body_entered5(body):
+	if notes >= 6: # cambiar cantidad de notas segun nivel
+		get_tree().change_scene("res://scenes/levels/level5/Win5.tscn")
+	else:
+		get_tree().change_scene("res://scenes/levels/level5/Lose5.tscn")
+
+# LEVEL 4
+
+func _on_fallzone_body_entered4(body):
+	get_tree().change_scene("res://scenes/levels/level4/Lose4.tscn")
+
+func _on_levelEnd_body_entered4(body):
+	if notes >= 6: # cambiar cantidad de notas segun nivel
+		get_tree().change_scene("res://scenes/levels/level4/Win4.tscn")
+	else:
+		get_tree().change_scene("res://scenes/levels/level4/Lose4.tscn")
+
+func _on_Menu_pressed4():
+	get_tree().change_scene("res://scenes/levels/level4/Menu4.tscn")
+
+# LEVEL 3
+
+func _on_fallzone_body_entered3(body):
+	get_tree().change_scene("res://scenes/levels/level3/Lose3.tscn")
+
+func _on_levelEnd_body_entered3(body):
+	if notes >= 6: # cambiar cantidad de notas segun nivel
+		get_tree().change_scene("res://scenes/levels/level3/Win3.tscn")
+	else:
+		get_tree().change_scene("res://scenes/levels/level3/Lose3.tscn")
+
+func _on_Menu_pressed3():
+	get_tree().change_scene("res://scenes/levels/level3/Menu3.tscn")
+	
+# LEVEL 2
+
+func _on_levelEnd_body_entered2(body):
+	if notes >= 6: # cambiar cantidad de notas segun nivel
+		get_tree().change_scene("res://scenes/levels/level2/Win2.tscn")
+	else:
+		get_tree().change_scene("res://scenes/levels/level2/Lose2.tscn")
+
+func _on_fallzone_body_entered2(body):
+	get_tree().change_scene("res://scenes/levels/level2/Lose2.tscn")
+
+func _on_Menu_pressed2():
+	get_tree().change_scene("res://scenes/levels/level2/Menu2.tscn")
+	
+# LEVEL 1
+
+func _on_fallzone_body_entered1(body):
+	get_tree().change_scene("res://scenes/levels/level1/Lose1.tscn")
+
+func _on_levelEnd_body_entered1(body):
+	if notes >= 6: # cambiar cantidad de notas segun nivel
+		get_tree().change_scene("res://scenes/levels/level1/Win1.tscn")
+	else:
+		get_tree().change_scene("res://scenes/levels/level1/Lose1.tscn")
+
+func _on_Menu_pressed1():
+	get_tree().change_scene("res://scenes/levels/level1/Menu1.tscn")
