@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Activate.gd" type="Script" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" type="Texture" id=16]
 [ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/levels/level1/lines.gd" type="Script" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -663,7 +664,7 @@ size = 60
 font_data = ExtResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=34]
-extents = Vector2( 23.25, 299.5 )
+extents = Vector2( 14, 299.5 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -738,7 +739,7 @@ centered = false
 position = Vector2( 1, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLimits/Wall2"]
-position = Vector2( 3575, 585 )
+position = Vector2( 3485, 590 )
 shape = SubResource( 3 )
 
 [node name="Wall3" type="StaticBody2D" parent="CollisionLimits"]
@@ -751,42 +752,42 @@ shape = SubResource( 3 )
 [node name="MusicNotes" type="Node" parent="."]
 
 [node name="MusicNote" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 822, 786 )
+position = Vector2( 768, 784 )
 collision_layer = 3
 collision_mask = 3
 
 [node name="MusicNote2" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 666, 770 )
+position = Vector2( 286, 796 )
 collision_layer = 3
 collision_mask = 3
 
 [node name="MusicNote3" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 1592, 805 )
+position = Vector2( 1697, 801 )
 collision_layer = 3
 collision_mask = 3
 
 [node name="MusicNote4" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 2014, 658 )
+position = Vector2( 2028, 651 )
 collision_layer = 3
 collision_mask = 3
 
 [node name="MusicNote5" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 2651, 625 )
+position = Vector2( 2625, 625 )
 collision_layer = 3
 collision_mask = 3
 
 [node name="MusicNote6" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 2335, 547 )
+position = Vector2( 2356, 546 )
 collision_layer = 3
 collision_mask = 3
 
 [node name="MusicNote7" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 1421, 758 )
+position = Vector2( 1487, 699 )
 collision_layer = 3
 collision_mask = 3
 
 [node name="MusicNote8" parent="MusicNotes" instance=ExtResource( 10 )]
-position = Vector2( 1205, 809 )
+position = Vector2( 1248, 812 )
 collision_layer = 3
 collision_mask = 3
 
@@ -889,7 +890,7 @@ mode = 3
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Activate"]
-position = Vector2( 7, -188.5 )
+position = Vector2( -253, -186 )
 shape = SubResource( 34 )
 
 [node name="1" type="Sprite" parent="Activate"]
@@ -898,6 +899,13 @@ position = Vector2( -16, -106 )
 scale = Vector2( 3, 13.9375 )
 texture = ExtResource( 6 )
 centered = false
+
+[node name="lines" type="Node2D" parent="."]
+script = ExtResource( 19 )
+bpm = 100
+song_length = 3.0
+crotchet_size = 1
+offset = 1
 
 [connection signal="dash_made" from="Player" to="HUD" method="_on_Player_dash_made"]
 [connection signal="note_collected" from="MusicNotes/MusicNote" to="HUD" method="_on_MusicNote_collected"]

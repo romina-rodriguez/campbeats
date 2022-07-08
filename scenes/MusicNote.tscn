@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/Notes.png" type="Texture" id=1]
 [ext_resource path="res://scripts/MusicNote.gd" type="Script" id=2]
@@ -135,6 +135,8 @@ animation = "idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
 [sub_resource type="AnimationNodeStateMachine" id=13]
 states/available/node = SubResource( 10 )
 states/available/position = Vector2( 784, 121 )
@@ -142,7 +144,7 @@ states/get/node = SubResource( 16 )
 states/get/position = Vector2( 1064, 121 )
 states/idle/node = SubResource( 11 )
 states/idle/position = Vector2( 487, 121 )
-transitions = [ "idle", "available", SubResource( 12 ), "available", "get", SubResource( 17 ) ]
+transitions = [ "idle", "available", SubResource( 12 ), "available", "get", SubResource( 17 ), "available", "idle", SubResource( 19 ) ]
 start_node = "idle"
 end_node = "get"
 graph_offset = Vector2( 263.979, 0 )
@@ -158,12 +160,11 @@ scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -24, -32.6291 )
+position = Vector2( -24, -31.4368 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 centered = false
 hframes = 2
-frame = 1
 
 [node name="SoundCollect" type="AudioStreamPlayer" parent="."]
 stream = SubResource( 18 )

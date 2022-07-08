@@ -4,8 +4,8 @@ extends KinematicBody2D
 var lineal_vel= Vector2.ZERO
 var SPEED = 300
 var JUMP_SPEED = 300
-var JUMP_FORCE = 1.2
-var GRAVITY = 500
+var JUMP_FORCE = 2.2
+var GRAVITY = 1500
 var POWER_UP = false
 var notes = 0
 var _facing_right = true
@@ -66,17 +66,17 @@ func _input(event):
 		_facing_right = true
 		scale.x = -1
 	if Input.is_action_just_pressed("dash") and DASH > 0:
-		SPEED = 600
-		GRAVITY = 1000
-		JUMP_FORCE = 2.4
+		SPEED = 370
+		GRAVITY = 3200
+		JUMP_FORCE = 3.5
 		POWER_UP = true
 		emit_signal("dash_made")
 		yield(get_tree().create_timer(5),"timeout")
 		DASH -= 1
 		POWER_UP = false
 		SPEED = 300
-		GRAVITY = 500
-		JUMP_FORCE = 1.2
+		GRAVITY = 1500
+		JUMP_FORCE = 2.2
 	if Input.is_action_just_pressed("jump") and on_floor :
 		lineal_vel.y = -JUMP_SPEED*JUMP_FORCE
 
