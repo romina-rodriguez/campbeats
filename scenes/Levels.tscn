@@ -158,8 +158,9 @@ texture = ExtResource( 5 )
 expand = true
 
 [node name="Title" type="Label" parent="Background"]
+margin_top = 48.0
 margin_right = 1152.0
-margin_bottom = 264.0
+margin_bottom = 312.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Levels"
@@ -171,17 +172,17 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="Buttons"]
-margin_left = 192.0
-margin_top = 240.0
-margin_right = 544.0
-margin_bottom = 408.0
+margin_left = 184.0
+margin_top = 304.0
+margin_right = 536.0
+margin_bottom = 472.0
 custom_styles/panel = SubResource( 11 )
 
 [node name="Level 1" type="Button" parent="Buttons"]
-margin_left = 192.0
-margin_top = 240.0
-margin_right = 544.0
-margin_bottom = 408.0
+margin_left = 184.0
+margin_top = 304.0
+margin_right = 536.0
+margin_bottom = 472.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -191,17 +192,17 @@ flat = true
 expand_icon = true
 
 [node name="Panel2" type="Panel" parent="Buttons"]
-margin_left = 608.0
-margin_top = 240.0
-margin_right = 960.0
-margin_bottom = 408.0
+margin_left = 600.0
+margin_top = 304.0
+margin_right = 952.0
+margin_bottom = 472.0
 custom_styles/panel = SubResource( 11 )
 
 [node name="Level 2" type="Button" parent="Buttons"]
-margin_left = 608.0
-margin_top = 240.0
-margin_right = 961.0
-margin_bottom = 408.0
+margin_left = 600.0
+margin_top = 304.0
+margin_right = 952.0
+margin_bottom = 472.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -211,17 +212,17 @@ flat = true
 expand_icon = true
 
 [node name="Panel3" type="Panel" parent="Buttons"]
-margin_left = 192.0
-margin_top = 424.0
-margin_right = 544.0
-margin_bottom = 592.0
+margin_left = 600.0
+margin_top = 488.0
+margin_right = 952.0
+margin_bottom = 656.0
 custom_styles/panel = SubResource( 11 )
 
 [node name="Level 3" type="Button" parent="Buttons"]
-margin_left = 192.0
-margin_top = 424.0
-margin_right = 544.0
-margin_bottom = 592.0
+margin_left = 184.0
+margin_top = 488.0
+margin_right = 536.0
+margin_bottom = 656.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -231,42 +232,22 @@ flat = true
 expand_icon = true
 
 [node name="Panel4" type="Panel" parent="Buttons"]
-margin_left = 608.0
-margin_top = 424.0
-margin_right = 960.0
-margin_bottom = 592.0
+margin_left = 184.0
+margin_top = 488.0
+margin_right = 536.0
+margin_bottom = 656.0
 custom_styles/panel = SubResource( 11 )
 
 [node name="Level 4" type="Button" parent="Buttons"]
-margin_left = 608.0
-margin_top = 424.0
-margin_right = 960.0
-margin_bottom = 592.0
+margin_left = 600.0
+margin_top = 488.0
+margin_right = 952.0
+margin_bottom = 656.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Level   4"
-flat = true
-expand_icon = true
-
-[node name="Panel5" type="Panel" parent="Buttons"]
-margin_left = 192.0
-margin_top = 608.0
-margin_right = 544.0
-margin_bottom = 776.0
-custom_styles/panel = SubResource( 11 )
-
-[node name="Level 5" type="Button" parent="Buttons"]
-margin_left = 192.0
-margin_top = 608.0
-margin_right = 544.0
-margin_bottom = 776.0
-custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
-custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
-custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Level   5"
 flat = true
 expand_icon = true
 
@@ -279,10 +260,9 @@ autoplay = true
 tile_set = SubResource( 10 )
 cell_size = Vector2( 10, 10 )
 format = 1
-tile_data = PoolIntArray( 1966122, 1, 0, 1966163, 2, 0, 3145769, 3, 0, 3145811, 4, 0, 4325417, 0, 0 )
+tile_data = PoolIntArray( 2359337, 2, 0, 2359378, 3, 0, 3604520, 4, 0, 3604562, 0, 0 )
 
 [connection signal="pressed" from="Buttons/Level 1" to="." method="_on_Level_1_pressed"]
-[connection signal="pressed" from="Buttons/Level 2" to="." method="_on_Level_2_pressed"]
-[connection signal="pressed" from="Buttons/Level 3" to="." method="_on_Level_3_pressed"]
-[connection signal="pressed" from="Buttons/Level 4" to="." method="_on_Level_4_pressed"]
-[connection signal="pressed" from="Buttons/Level 5" to="." method="_on_Level_5_pressed"]
+[connection signal="pressed" from="Buttons/Level 2" to="." method="_on_Level_3_pressed"]
+[connection signal="pressed" from="Buttons/Level 3" to="." method="_on_Level_4_pressed"]
+[connection signal="pressed" from="Buttons/Level 4" to="." method="_on_Level_5_pressed"]

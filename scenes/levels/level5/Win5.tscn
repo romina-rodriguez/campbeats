@@ -60,7 +60,8 @@ margin_right = 1152.0
 margin_bottom = 456.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "YOU WIN! :)"
+text = "GAME OVER
+YOU WIN! :)"
 align = 1
 valign = 1
 
@@ -69,9 +70,9 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="levels" type="Button" parent="Buttons"]
-margin_top = 464.0
+margin_top = 528.0
 margin_right = 1152.0
-margin_bottom = 534.0
+margin_bottom = 598.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -80,9 +81,9 @@ text = "levels"
 flat = true
 
 [node name="quit" type="Button" parent="Buttons"]
-margin_top = 544.0
+margin_top = 608.0
 margin_right = 1152.0
-margin_bottom = 614.0
+margin_bottom = 678.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )

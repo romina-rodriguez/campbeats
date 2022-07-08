@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
@@ -25,6 +25,10 @@ corner_radius_bottom_left = 20
 
 [sub_resource type="DynamicFont" id=8]
 size = 42
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 30
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=12]
@@ -124,19 +128,30 @@ margin_bottom = 752.0
 custom_styles/panel = SubResource( 7 )
 
 [node name="titles" type="Label" parent="Panel"]
-margin_left = 40.0
-margin_top = 32.0
+margin_top = 16.0
 margin_right = 1024.0
-margin_bottom = 365.0
+margin_bottom = 528.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 8 )
-text = "Sprite
+text = "Game Designers
+
+Sprite
 
 Music
 
 Font
 
 Assets"
+align = 1
+
+[node name="names" type="Label" parent="Panel"]
+margin_top = 72.0
+margin_right = 1032.0
+margin_bottom = 136.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Tomás Calderón R., Fernanda C. Gangas, Romina Rodríguez"
+align = 1
 
 [node name="fontLinks" type="Control" parent="Panel"]
 margin_left = -64.0
@@ -145,10 +160,10 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/fontLinks"]
-margin_left = 104.0
-margin_top = 496.0
-margin_right = 359.0
-margin_bottom = 526.0
+margin_left = 496.0
+margin_top = 584.0
+margin_right = 751.0
+margin_bottom = 614.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -165,10 +180,10 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/assetsLink"]
-margin_left = 104.0
-margin_top = 592.0
-margin_right = 359.0
-margin_bottom = 622.0
+margin_left = 368.0
+margin_top = 680.0
+margin_right = 623.0
+margin_bottom = 710.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -179,10 +194,10 @@ text = "Seasonal Tileset,"
 underline = 1
 
 [node name="LinkButton2" type="LinkButton" parent="Panel/assetsLink"]
-margin_left = 328.0
-margin_top = 592.0
-margin_right = 583.0
-margin_bottom = 622.0
+margin_left = 584.0
+margin_top = 680.0
+margin_right = 839.0
+margin_bottom = 710.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -199,10 +214,10 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/musicLinks"]
-margin_left = 104.0
-margin_top = 400.0
-margin_right = 359.0
-margin_bottom = 430.0
+margin_left = 456.0
+margin_top = 488.0
+margin_right = 711.0
+margin_bottom = 518.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -219,10 +234,10 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/spriteLinks"]
-margin_left = 104.0
-margin_top = 304.0
-margin_right = 359.0
-margin_bottom = 334.0
+margin_left = 504.0
+margin_top = 392.0
+margin_right = 759.0
+margin_bottom = 422.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
