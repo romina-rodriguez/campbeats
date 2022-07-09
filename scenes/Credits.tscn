@@ -28,7 +28,7 @@ size = 42
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=15]
-size = 30
+size = 29
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=12]
@@ -139,16 +139,29 @@ Music & Sounds
 
 Fonts
 
-2D Assets"
+2D Assets
+
+Special Thanks To"
 align = 1
 
 [node name="names" type="Label" parent="Panel"]
 margin_top = 72.0
-margin_right = 1032.0
+margin_right = 1024.0
 margin_bottom = 136.0
+rect_pivot_offset = Vector2( 792, 16 )
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 15 )
 text = "Tomás Calderón R., Fernanda C. Gangas, Romina Rodríguez"
+align = 1
+
+[node name="thanksto" type="Label" parent="Panel"]
+margin_top = 448.0
+margin_right = 1024.0
+margin_bottom = 512.0
+rect_pivot_offset = Vector2( 792, 16 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Ari the cat, ..."
 align = 1
 
 [node name="fontLinks" type="Control" parent="Panel"]
@@ -158,9 +171,9 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/fontLinks"]
-margin_left = 496.0
+margin_left = 528.0
 margin_top = 480.0
-margin_right = 751.0
+margin_right = 624.0
 margin_bottom = 510.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
@@ -168,7 +181,7 @@ custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 12 )
 action_mode = 0
-text = "Fat Pix Font"
+text = "ngndang"
 underline = 1
 
 [node name="assetsLink" type="Control" parent="Panel"]
@@ -178,31 +191,31 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/assetsLink"]
-margin_left = 368.0
-margin_top = 680.0
-margin_right = 623.0
-margin_bottom = 710.0
+margin_left = 360.0
+margin_top = 576.0
+margin_right = 615.0
+margin_bottom = 606.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 13 )
 action_mode = 0
-text = "Seasonal Tileset,"
+text = "grafxkidt,"
 underline = 1
 
 [node name="LinkButton2" type="LinkButton" parent="Panel/assetsLink"]
-margin_left = 584.0
-margin_top = 680.0
-margin_right = 839.0
-margin_bottom = 710.0
+margin_left = 488.0
+margin_top = 576.0
+margin_right = 743.0
+margin_bottom = 606.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 14 )
 action_mode = 0
-text = "Pixel Adventure"
+text = "pixelfrog-assets,"
 underline = 1
 
 [node name="musicLinks" type="Control" parent="Panel"]
@@ -212,17 +225,17 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/musicLinks"]
-margin_left = 448.0
-margin_top = 392.0
-margin_right = 703.0
-margin_bottom = 422.0
+margin_left = 504.0
+margin_top = 384.0
+margin_right = 629.0
+margin_bottom = 414.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 11 )
 action_mode = 0
-text = "Chiptune Music Loops"
+text = "tallbeard"
 underline = 1
 
 [node name="spriteLinks" type="Control" parent="Panel"]
@@ -232,16 +245,16 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/spriteLinks"]
-margin_left = 808.0
-margin_top = 680.0
-margin_right = 1063.0
-margin_bottom = 710.0
+margin_left = 704.0
+margin_top = 576.0
+margin_right = 959.0
+margin_bottom = 606.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 10 )
 action_mode = 0
-text = "Jimmy Sprite"
+text = "lhteam"
 underline = 1
 
 [connection signal="pressed" from="Buttons/back" to="." method="_on_back_pressed"]
