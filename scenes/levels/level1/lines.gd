@@ -10,7 +10,7 @@ export (int) var offset setget set_offset
 
 func _draw():
 	var bpm = 90
-	var song_length = 75
+	var song_length = 250
 	var crotchet_size = 30
 	var offset = 1
 	var crotchet_n = ceil(song_length * (bpm / 60.0))
