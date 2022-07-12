@@ -34,9 +34,7 @@ func _on_MusicNote_body_entered(body):
 				$SoundCollect.play()
 
 func _on_MusicNote_body_exited(body):
-	print("aaa")
 	if(body.name=="Player"):
-		print("sss")
 		ON_AREA_USER = 0
 
 		
