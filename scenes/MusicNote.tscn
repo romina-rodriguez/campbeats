@@ -160,12 +160,11 @@ scale = Vector2( 3, 3 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -24, -31.1384 )
+position = Vector2( -24, -38.1227 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 centered = false
 hframes = 2
-frame = 1
 
 [node name="SoundCollect" type="AudioStreamPlayer" parent="."]
 stream = SubResource( 18 )

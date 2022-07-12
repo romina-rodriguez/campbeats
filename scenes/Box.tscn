@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/note.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Box.gd" type="Script" id=2]
-[ext_resource path="res://assets/Sounds/nota musical/8bit-game-type-single-note_C.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/MI_SFX 19.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/Pixel Assets/Items/Boxes/Box2/Idle.png" type="Texture" id=4]
 [ext_resource path="res://assets/Pixel Assets/Items/Boxes/Box2/Hit (28x24).png" type="Texture" id=5]
 

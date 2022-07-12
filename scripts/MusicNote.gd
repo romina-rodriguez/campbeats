@@ -31,7 +31,6 @@ func _on_MusicNote_body_entered(body):
 				USER_GET = 1
 				playback.travel("get")
 				emit_signal("note_collected")
-				body.add_note()
 				$SoundCollect.play()
 
 func _on_MusicNote_body_exited(body):
