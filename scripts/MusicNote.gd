@@ -11,7 +11,6 @@ signal note_collected
 
 
 func _on_MusicNote_body_entered(body):
-	print("hi")
 	if(body.name=="Player"):
 		ON_AREA_USER = 1
 	if(ACTIVATE==0 and body.name=="Activate"):
