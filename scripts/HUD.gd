@@ -29,3 +29,7 @@ func _on_Box_note_collected():
 
 func _on_Menu_pressed():
 	get_tree().change_scene("res://scenes/Menu.tscn")
+	
+
+func get_notes():
+	return notes

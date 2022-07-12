@@ -10,7 +10,7 @@ extends RigidBody2D
 
 var SPEED = 300
 var direction = Vector2.RIGHT
-var LIMIT = 3100
+var LIMIT = 9700
 func _process(delta):
 	
 	if(self.position.x<LIMIT):
