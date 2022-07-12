@@ -1,7 +1,7 @@
 tool
 extends Node2D
 
-export (int) var bpm = 5 setget set_bpm
+export (int) var bpm setget set_bpm
 export (float) var song_length setget set_song_length
 export (int) var crotchet_size setget set_crotchet_size
 export (Color) var color = Color.blue setget set_color

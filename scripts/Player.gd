@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 var lineal_vel= Vector2.ZERO
-var SPEED = 300
+var SPEED = 310
 var JUMP_SPEED = 300
 var JUMP_FORCE = 2.2
 var GRAVITY = 1500
