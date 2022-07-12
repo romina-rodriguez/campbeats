@@ -23,3 +23,19 @@ func _on_LinkButton4_pressed():
 
 func _on_LinkButton5_pressed():
 	OS.shell_open("https://pixelfrog-assets.itch.io/pixel-adventure-1")
+
+
+func _on_LinkButton_pressed():
+	OS.shell_open("https://coloralpha.itch.io/50-menu-interface-sfx")
+
+
+func _on_LinkButtonm3_pressed():
+	OS.shell_open("https://freemusicarchive.org/music/8bit_Betty/too_bleep_to_bloop/hc152_03_nikomas_theme_extended_mix_by_8bit_betty/")
+
+
+func _on_LinkButtonf2_pressed():
+	OS.shell_open("https://fontlibrary.org/en/font/rich-eatin")
+
+
+func _on_LinkButtonm4_pressed():
+	OS.shell_open("https://mixkit.co/free-sound-effects/")
