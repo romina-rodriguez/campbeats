@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 var lineal_vel= Vector2.ZERO
-var SPEED = 300
+var SPEED = 310
 var JUMP_SPEED = 300
 var JUMP_FORCE = 2.2
 var GRAVITY = 1500
@@ -80,13 +80,9 @@ func _input(event):
 	if Input.is_action_just_pressed("jump") and on_floor :
 		lineal_vel.y = -JUMP_SPEED*JUMP_FORCE
 
-func add_note():
-	notes += 1
-
 func _on_SwordHit_area_entered(area):
 	if area.is_in_group("hitbox"):
 		area.take_damage()
-		add_note()
 
 func _on_MusicNote_collected():
 	pass # Replace with function body.
@@ -100,7 +96,7 @@ func _on_Menu_pressed5():
 	get_tree().change_scene("res://scenes/levels/level5/Menu5.tscn")
 
 func _on_levelEnd_body_entered5(body):
-	if notes >= 6: # cambiar cantidad de notas segun nivel
+	if get_node("../HUD").get_notes() >= 6: # cambiar cantidad de notas segun nivel
 		get_tree().change_scene("res://scenes/levels/level5/Win5.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/level5/Lose5.tscn")
@@ -111,7 +107,7 @@ func _on_fallzone_body_entered4(body):
 	get_tree().change_scene("res://scenes/levels/level4/Lose4.tscn")
 
 func _on_levelEnd_body_entered4(body):
-	if notes >= 6: # cambiar cantidad de notas segun nivel
+	if get_node("../HUD").get_notes() >= 6: # cambiar cantidad de notas segun nivel
 		get_tree().change_scene("res://scenes/levels/level4/Win4.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/level4/Lose4.tscn")
@@ -125,7 +121,7 @@ func _on_fallzone_body_entered3(body):
 	get_tree().change_scene("res://scenes/levels/level3/Lose3.tscn")
 
 func _on_levelEnd_body_entered3(body):
-	if notes >= 6: # cambiar cantidad de notas segun nivel
+	if get_node("../HUD").get_notes() >= 6: # cambiar cantidad de notas segun nivel
 		get_tree().change_scene("res://scenes/levels/level3/Win3.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/level3/Lose3.tscn")
@@ -136,7 +132,7 @@ func _on_Menu_pressed3():
 # LEVEL 2
 
 func _on_levelEnd_body_entered2(body):
-	if notes >= 6: # cambiar cantidad de notas segun nivel
+	if get_node("../HUD").get_notes() >= 6: # cambiar cantidad de notas segun nivel
 		get_tree().change_scene("res://scenes/levels/level2/Win2.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/level2/Lose2.tscn")
@@ -153,7 +149,7 @@ func _on_fallzone_body_entered1(body):
 	get_tree().change_scene("res://scenes/levels/level1/Lose1.tscn")
 
 func _on_levelEnd_body_entered1(body):
-	if notes >= 6: # cambiar cantidad de notas segun nivel
+	if get_node("../HUD").get_notes() >= 22: # cambiar cantidad de notas segun nivel
 		get_tree().change_scene("res://scenes/levels/level1/Win1.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/level1/Lose1.tscn")
