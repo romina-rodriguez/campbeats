@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
@@ -17,6 +17,10 @@ size = 83
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 60
 font_data = ExtResource( 2 )
 
@@ -85,28 +89,27 @@ text = "try again!"
 flat = true
 expand_icon = true
 
-[node name="levels" type="Button" parent="Buttons"]
-margin_left = 384.0
-margin_top = 528.0
-margin_right = 768.0
-margin_bottom = 573.0
-custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
-custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
-custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
-custom_fonts/font = SubResource( 4 )
-text = "levels"
-flat = true
-
 [node name="quit" type="Button" parent="Buttons"]
-margin_left = 384.0
-margin_top = 600.0
-margin_right = 768.0
-margin_bottom = 645.0
+margin_left = 376.0
+margin_top = 568.0
+margin_right = 760.0
+margin_bottom = 638.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "quit"
+flat = true
+
+[node name="levels" type="Button" parent="Buttons"]
+margin_top = 512.0
+margin_right = 1152.0
+margin_bottom = 582.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "levels"
 flat = true
 
 [node name="MusicLoseScreen" type="AudioStreamPlayer" parent="."]
@@ -115,5 +118,5 @@ volume_db = -4.142
 autoplay = true
 
 [connection signal="pressed" from="Buttons/again" to="." method="_on_again_pressed"]
-[connection signal="pressed" from="Buttons/levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="Buttons/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Buttons/levels" to="." method="_on_levels_pressed"]

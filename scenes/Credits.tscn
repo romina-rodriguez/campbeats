@@ -28,7 +28,7 @@ size = 42
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=15]
-size = 29
+size = 27
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=12]
@@ -128,12 +128,12 @@ margin_bottom = 752.0
 custom_styles/panel = SubResource( 7 )
 
 [node name="titles" type="Label" parent="Panel"]
-margin_top = 16.0
+margin_top = 40.0
 margin_right = 1024.0
-margin_bottom = 528.0
+margin_bottom = 552.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 8 )
-text = "Game Designers
+text = "Game Designers & Developers
 
 Music & Sounds
 
@@ -145,23 +145,34 @@ Special Thanks To"
 align = 1
 
 [node name="names" type="Label" parent="Panel"]
-margin_top = 72.0
+margin_top = 88.0
 margin_right = 1024.0
-margin_bottom = 136.0
+margin_bottom = 152.0
 rect_pivot_offset = Vector2( 792, 16 )
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 15 )
 text = "Tomás Calderón R., Fernanda C. Gangas, Romina Rodríguez"
 align = 1
 
-[node name="thanksto" type="Label" parent="Panel"]
-margin_top = 448.0
-margin_right = 1024.0
-margin_bottom = 512.0
+[node name="romina" type="Label" parent="Panel"]
+margin_left = 233.0
+margin_top = 376.0
+margin_right = 1257.0
+margin_bottom = 440.0
 rect_pivot_offset = Vector2( 792, 16 )
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 15 )
-text = "Ari the cat, ..."
+text = "Romina Rodríguez"
+align = 1
+
+[node name="thanksto" type="Label" parent="Panel"]
+margin_top = 472.0
+margin_right = 1024.0
+margin_bottom = 536.0
+rect_pivot_offset = Vector2( 792, 16 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Gabriel G. Orrego"
 align = 1
 
 [node name="fontLinks" type="Control" parent="Panel"]
@@ -171,17 +182,37 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/fontLinks"]
-margin_left = 528.0
-margin_top = 480.0
-margin_right = 624.0
-margin_bottom = 510.0
+margin_left = 472.0
+margin_top = 496.0
+margin_right = 568.0
+margin_bottom = 526.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 12 )
 action_mode = 0
-text = "ngndang"
+text = "ngndang,"
+underline = 1
+
+[node name="fontLinks2" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/fontLinks2"]
+margin_left = 576.0
+margin_top = 496.0
+margin_right = 687.0
+margin_bottom = 526.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 12 )
+action_mode = 0
+text = "Cos Ryan"
 underline = 1
 
 [node name="assetsLink" type="Control" parent="Panel"]
@@ -191,10 +222,10 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/assetsLink"]
-margin_left = 360.0
-margin_top = 576.0
-margin_right = 615.0
-margin_bottom = 606.0
+margin_left = 273.0
+margin_top = 600.0
+margin_right = 528.0
+margin_bottom = 630.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -205,10 +236,10 @@ text = "grafxkidt,"
 underline = 1
 
 [node name="LinkButton2" type="LinkButton" parent="Panel/assetsLink"]
-margin_left = 488.0
-margin_top = 576.0
-margin_right = 743.0
-margin_bottom = 606.0
+margin_left = 401.0
+margin_top = 600.0
+margin_right = 656.0
+margin_bottom = 630.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -225,17 +256,57 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/musicLinks"]
-margin_left = 504.0
-margin_top = 384.0
-margin_right = 629.0
-margin_bottom = 414.0
+margin_left = 352.0
+margin_top = 408.0
+margin_right = 482.0
+margin_bottom = 438.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 11 )
 action_mode = 0
-text = "tallbeard"
+text = "tallbeard,"
+underline = 1
+
+[node name="musicLinks2" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/musicLinks2"]
+margin_left = 496.0
+margin_top = 408.0
+margin_right = 639.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 11 )
+action_mode = 0
+text = "coloralpha,"
+underline = 1
+
+[node name="musicLinks3" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/musicLinks3"]
+margin_left = 648.0
+margin_top = 408.0
+margin_right = 786.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 11 )
+action_mode = 0
+text = "8bit Betty"
 underline = 1
 
 [node name="spriteLinks" type="Control" parent="Panel"]
@@ -245,22 +316,25 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/spriteLinks"]
-margin_left = 704.0
-margin_top = 576.0
-margin_right = 959.0
-margin_bottom = 606.0
+margin_left = 617.0
+margin_top = 600.0
+margin_right = 872.0
+margin_bottom = 630.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 10 )
 action_mode = 0
-text = "lhteam"
+text = "lhteam,"
 underline = 1
 
 [connection signal="pressed" from="Buttons/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Panel/fontLinks/LinkButton" to="." method="_on_LinkButton3_pressed"]
+[connection signal="pressed" from="Panel/fontLinks2/LinkButton" to="." method="_on_LinkButtonf2_pressed"]
 [connection signal="pressed" from="Panel/assetsLink/LinkButton" to="." method="_on_LinkButton4_pressed"]
 [connection signal="pressed" from="Panel/assetsLink/LinkButton2" to="." method="_on_LinkButton5_pressed"]
 [connection signal="pressed" from="Panel/musicLinks/LinkButton" to="." method="_on_LinkButton2_pressed"]
+[connection signal="pressed" from="Panel/musicLinks2/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="Panel/musicLinks3/LinkButton" to="." method="_on_LinkButtonm3_pressed"]
 [connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton1_pressed"]
 [connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton_pressed"]

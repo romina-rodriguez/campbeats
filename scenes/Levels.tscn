@@ -163,7 +163,7 @@ margin_right = 1152.0
 margin_bottom = 312.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Levels"
+text = "LEVELS"
 align = 1
 valign = 1
 
