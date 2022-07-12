@@ -135,13 +135,11 @@ custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Game Designers
 
-Sprite
+Music & Sounds
 
-Music
+Fonts
 
-Font
-
-Assets"
+2D Assets"
 align = 1
 
 [node name="names" type="Label" parent="Panel"]
@@ -161,9 +159,9 @@ margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/fontLinks"]
 margin_left = 496.0
-margin_top = 584.0
+margin_top = 480.0
 margin_right = 751.0
-margin_bottom = 614.0
+margin_bottom = 510.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -214,10 +212,10 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/musicLinks"]
-margin_left = 456.0
-margin_top = 488.0
-margin_right = 711.0
-margin_bottom = 518.0
+margin_left = 448.0
+margin_top = 392.0
+margin_right = 703.0
+margin_bottom = 422.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
@@ -234,10 +232,10 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/spriteLinks"]
-margin_left = 504.0
-margin_top = 392.0
-margin_right = 759.0
-margin_bottom = 422.0
+margin_left = 808.0
+margin_top = 680.0
+margin_right = 1063.0
+margin_bottom = 710.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )

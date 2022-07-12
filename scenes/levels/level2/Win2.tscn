@@ -81,7 +81,7 @@ custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 5 )
-text = "try again!"
+text = "next level"
 flat = true
 expand_icon = true
 

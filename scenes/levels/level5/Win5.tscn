@@ -55,9 +55,9 @@ texture = ExtResource( 5 )
 expand = true
 
 [node name="Title" type="Label" parent="Background"]
-margin_top = 192.0
+margin_top = 152.0
 margin_right = 1152.0
-margin_bottom = 456.0
+margin_bottom = 463.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "GAME OVER
@@ -70,9 +70,9 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="levels" type="Button" parent="Buttons"]
-margin_top = 528.0
+margin_top = 480.0
 margin_right = 1152.0
-margin_bottom = 598.0
+margin_bottom = 550.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -80,10 +80,21 @@ custom_fonts/font = SubResource( 4 )
 text = "levels"
 flat = true
 
-[node name="quit" type="Button" parent="Buttons"]
-margin_top = 608.0
+[node name="credits" type="Button" parent="Buttons"]
+margin_top = 552.0
 margin_right = 1152.0
-margin_bottom = 678.0
+margin_bottom = 622.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "credits"
+flat = true
+
+[node name="quit" type="Button" parent="Buttons"]
+margin_top = 622.0
+margin_right = 1152.0
+margin_bottom = 692.0
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
@@ -95,3 +106,7 @@ flat = true
 stream = ExtResource( 4 )
 volume_db = -0.016
 autoplay = true
+
+[connection signal="pressed" from="Buttons/levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="Buttons/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Buttons/quit" to="." method="_on_quit_pressed"]
