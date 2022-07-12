@@ -256,9 +256,9 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/musicLinks"]
-margin_left = 352.0
+margin_left = 305.0
 margin_top = 408.0
-margin_right = 482.0
+margin_right = 435.0
 margin_bottom = 438.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
@@ -276,9 +276,9 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/musicLinks2"]
-margin_left = 496.0
+margin_left = 449.0
 margin_top = 408.0
-margin_right = 639.0
+margin_right = 592.0
 margin_bottom = 438.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
@@ -296,9 +296,9 @@ margin_right = -24.0
 margin_bottom = -184.0
 
 [node name="LinkButton" type="LinkButton" parent="Panel/musicLinks3"]
-margin_left = 648.0
+margin_left = 601.0
 margin_top = 408.0
-margin_right = 786.0
+margin_right = 739.0
 margin_bottom = 438.0
 focus_mode = 2
 custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
@@ -306,7 +306,27 @@ custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 11 )
 action_mode = 0
-text = "8bit Betty"
+text = "8bit Betty,"
+underline = 1
+
+[node name="musicLinks4" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/musicLinks4"]
+margin_left = 751.0
+margin_top = 408.0
+margin_right = 889.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 11 )
+action_mode = 0
+text = "mixkit"
 underline = 1
 
 [node name="spriteLinks" type="Control" parent="Panel"]
@@ -336,5 +356,6 @@ underline = 1
 [connection signal="pressed" from="Panel/musicLinks/LinkButton" to="." method="_on_LinkButton2_pressed"]
 [connection signal="pressed" from="Panel/musicLinks2/LinkButton" to="." method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="Panel/musicLinks3/LinkButton" to="." method="_on_LinkButtonm3_pressed"]
+[connection signal="pressed" from="Panel/musicLinks4/LinkButton" to="." method="_on_LinkButtonm4_pressed"]
 [connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton1_pressed"]
 [connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton_pressed"]

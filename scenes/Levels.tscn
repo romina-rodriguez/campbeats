@@ -212,9 +212,9 @@ flat = true
 expand_icon = true
 
 [node name="Panel3" type="Panel" parent="Buttons"]
-margin_left = 600.0
+margin_left = 184.0
 margin_top = 488.0
-margin_right = 952.0
+margin_right = 536.0
 margin_bottom = 656.0
 custom_styles/panel = SubResource( 11 )
 
@@ -232,9 +232,9 @@ flat = true
 expand_icon = true
 
 [node name="Panel4" type="Panel" parent="Buttons"]
-margin_left = 184.0
+margin_left = 600.0
 margin_top = 488.0
-margin_right = 536.0
+margin_right = 952.0
 margin_bottom = 656.0
 custom_styles/panel = SubResource( 11 )
 
