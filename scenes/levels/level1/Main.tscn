@@ -1354,13 +1354,16 @@ offset = 1
 position = Vector2( 463, 440 )
 
 [node name="ButterflyPink2" parent="." instance=ExtResource( 24 )]
-position = Vector2( 4487, 456 )
+position = Vector2( 4455, 400 )
+
+[node name="ButterflyPink3" parent="." instance=ExtResource( 24 )]
+position = Vector2( 9511, 344 )
 
 [node name="ButterflyGreen1" parent="." instance=ExtResource( 25 )]
-position = Vector2( 1671, 616 )
+position = Vector2( 1943, 280 )
 
-[node name="Butterfly4" parent="." instance=ExtResource( 25 )]
-position = Vector2( 1671, 616 )
+[node name="ButterflyGreen2" parent="." instance=ExtResource( 25 )]
+position = Vector2( 6551, 304 )
 
 [connection signal="dash_made" from="Player" to="HUD" method="_on_Player_dash_made"]
 [connection signal="body_exited" from="MusicNotes/MusicNote" to="MusicNotes/MusicNote" method="_on_MusicNote_body_exited"]
