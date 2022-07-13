@@ -97,7 +97,10 @@ func _on_Menu_pressed5():
 
 func _on_levelEnd_body_entered5(body):
 	if get_node("../HUD").get_notes() >= 21: # cambiar cantidad de notas segun nivel
-		get_tree().change_scene("res://scenes/levels/level5/Win5.tscn")
+		if global_var.story_fin == 0:
+			get_tree().change_scene("res://scenes/Finish.tscn")
+		else:
+			get_tree().change_scene("res://scenes/levels/level5/Win5.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/level5/Lose5.tscn")
 

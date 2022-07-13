@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://scenes/DialogBoxFinish.gd" type="Script" id=3]
+[ext_resource path="res://scripts/DialogBox.gd" type="Script" id=3]
 [ext_resource path="res://assets/CatSprite.png" type="Texture" id=4]
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=5]
 [ext_resource path="res://assets/16x16 Menu Symbols (53).png" type="Texture" id=7]
@@ -94,7 +94,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[node name="Story" type="Control"]
+[node name="StoryFinish" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 

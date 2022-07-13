@@ -1,22 +1,10 @@
 extends Control
 
 var dialog = [
-	"Hi! My name's Jimmy :)", 
-	"I live in the flowery valley near the enchanted forest", 
-	"Many people say that the forest is a very dangerous place",
-	"Legends tell that there you can find all the seasons of the year",
-	"Moreover, there are people who say that you can even find a beach if you go deep enough",
-	"Funny, isn’t it?",
-	"Well, to get straight to the point...",
-	"A few days ago, while I was resting on the valley, my radio stopped working",
-	"I tried changing the batteries, but it didn’t work :(",
-	"The music had disappeared, how awful!!",
-	"Later, I realized that music could be heard coming from the forest",
-	"So, I grabbed my sword and I got closer",
-	"And you’re not gonna believe this, but I saw a path of musical notes there!!!!",
-	"I’m sure that wherever this path leads me to, I will end up finding the missing music",
-	"Would you like to help me on this quest?",
-	"It's that a yes? Then let's go!!!"
+	"The music is back!!!", 
+	"Thank you so much for helping me on this quest :)", 
+	"I hope you had as much fun as I did!",
+	"See you next time!!"
 ]
 
 var dialog_index = 0
@@ -45,7 +33,8 @@ func load_dialog():
 		)
 		$Tween.start()
 	else: 
-		get_tree().change_scene("res://scenes/levels/level1/Main.tscn")
+		global_var.story_fin += 1
+		get_tree().change_scene("res://scenes/levels/level5/Win5.tscn")
 	dialog_index += 1
 
 
