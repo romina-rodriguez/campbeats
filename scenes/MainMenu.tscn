@@ -372,6 +372,7 @@ margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Panel3"]
+modulate = Color( 0.133333, 0.180392, 0.560784, 0.760784 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 7 )
@@ -386,6 +387,7 @@ margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Panel4"]
+modulate = Color( 0.133333, 0.180392, 0.560784, 0.760784 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 7 )
