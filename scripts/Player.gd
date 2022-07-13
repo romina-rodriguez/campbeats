@@ -96,7 +96,7 @@ func _on_Menu_pressed5():
 	get_tree().change_scene("res://scenes/levels/level5/Menu5.tscn")
 
 func _on_levelEnd_body_entered5(body):
-	if get_node("../HUD").get_notes() >= 21: # cambiar cantidad de notas segun nivel
+	if get_node("../HUD").get_notes() >= 17: # cambiar cantidad de notas segun nivel
 		if global_var.story_fin == 0:
 			$SoundFinish.play()
 			yield(get_tree().create_timer(0.75),"timeout")
@@ -126,7 +126,7 @@ func _on_fallzone_body_entered3(body):
 	get_tree().change_scene("res://scenes/levels/level3/Lose3.tscn")
 
 func _on_levelEnd_body_entered3(body):
-	if get_node("../HUD").get_notes() >= 23: # cambiar cantidad de notas segun nivel
+	if get_node("../HUD").get_notes() >= 18: # cambiar cantidad de notas segun nivel
 		get_tree().change_scene("res://scenes/levels/level3/Win3.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/level3/Lose3.tscn")
