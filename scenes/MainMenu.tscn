@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/Music/8bit Betty - Nikoma's Theme (extended mix).mp3" type="AudioStream" id=9]
 
 [sub_resource type="DynamicFont" id=1]
-size = 154
+size = 120
 outline_size = 8
 outline_color = Color( 0.968627, 0.87451, 0.411765, 1 )
 font_data = ExtResource( 1 )
@@ -95,7 +95,7 @@ margin_right = 1152.0
 margin_bottom = 320.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Rhythm Quest"
+text = "RHYTHM QUEST"
 align = 1
 valign = 1
 
@@ -393,7 +393,7 @@ expand = true
 
 [node name="MusicMainMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = 2.0
+volume_db = -5.0
 autoplay = true
 
 [connection signal="pressed" from="Buttons/play" to="." method="_on_play_pressed"]
