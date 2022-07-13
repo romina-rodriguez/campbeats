@@ -1,0 +1,212 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/DialogBox.gd" type="Script" id=3]
+[ext_resource path="res://assets/CatSprite.png" type="Texture" id=4]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=5]
+[ext_resource path="res://assets/16x16 Menu Symbols (53).png" type="Texture" id=7]
+[ext_resource path="res://assets/Music/8bit Betty - Nikoma's Theme (extended mix).mp3" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 154
+outline_size = 8
+outline_color = Color( 0.968627, 0.87451, 0.411765, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.709804, 0.870588, 1, 1 )
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Animation" id=8]
+resource_name = "IDLE"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 968, 736 ), Vector2( 968, 739 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 968, 736 ) ]
+}
+
+[sub_resource type="DynamicFont" id=10]
+size = 42
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "player_idle"
+length = 1.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.5, 0.6, 1.2, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[node name="Story" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 1152.0
+margin_bottom = 832.0
+color = Color( 0.709804, 0.870588, 1, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_left = -144.0
+margin_top = -80.0
+margin_right = 1336.0
+margin_bottom = 968.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+margin_left = -192.0
+margin_top = -336.0
+margin_right = 1288.0
+margin_bottom = 712.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+margin_left = -160.0
+margin_top = 328.0
+margin_right = 1320.0
+margin_bottom = 1376.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Title" type="Label" parent="Background"]
+visible = false
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 1129.0
+margin_bottom = 178.0
+custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Rhythm Quest"
+align = 1
+valign = 1
+
+[node name="DialogBox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="DialogBox"]
+anchor_left = 14.4
+anchor_top = 20.6
+anchor_right = 14.4
+anchor_bottom = 20.6
+margin_left = -448.0
+margin_top = -248.0
+margin_right = 448.0
+margin_bottom = -48.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="next_indicator" type="Sprite" parent="DialogBox"]
+visible = false
+modulate = Color( 0, 0.109804, 1, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 968, 736 )
+rotation = 1.5708
+scale = Vector2( 3, 4 )
+texture = ExtResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/next_indicator"]
+autoplay = "IDLE"
+anims/IDLE = SubResource( 8 )
+anims/RESET = SubResource( 9 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+anchor_left = 3.4
+anchor_top = 14.6
+anchor_right = 25.4
+anchor_bottom = 19.2
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+custom_colors/default_color = Color( 0.623529, 0.788235, 1, 1 )
+custom_fonts/normal_font = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "hola wenas como estan"
+text = "hola wenas como estan"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Tween" type="Tween" parent="DialogBox"]
+
+[node name="Sprite" type="Sprite" parent="DialogBox"]
+position = Vector2( 616, 328 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 4 )
+hframes = 28
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/Sprite"]
+autoplay = "player_idle"
+anims/RESET = SubResource( 11 )
+anims/player_idle = SubResource( 12 )
+
+[node name="MusicMainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 2.0
+autoplay = true
+
+[connection signal="tween_completed" from="DialogBox/Tween" to="DialogBox" method="_on_Tween_tween_completed"]

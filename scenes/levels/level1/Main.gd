@@ -1,6 +1,6 @@
 extends Node2D
 
-var pause_st = true
+var pause_st = true #pause start
 
 func _ready():
 	get_tree().paused = pause_st
