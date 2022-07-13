@@ -98,6 +98,8 @@ func _on_Menu_pressed5():
 func _on_levelEnd_body_entered5(body):
 	if get_node("../HUD").get_notes() >= 21: # cambiar cantidad de notas segun nivel
 		if global_var.story_fin == 0:
+			$SoundFinish.play()
+			yield(get_tree().create_timer(0.75),"timeout")
 			get_tree().change_scene("res://scenes/Finish.tscn")
 		else:
 			get_tree().change_scene("res://scenes/levels/level5/Win5.tscn")
