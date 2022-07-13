@@ -11,7 +11,7 @@ func _ready():
 		$Timer.start()
 	else:
 		emit_signal("cd_start")
-		$Label.text = "start!"
+		$Label.text = "Start!"
 		$Timer.stop()
 		yield(get_tree().create_timer(1), "timeout")
 		$Label.text = ""

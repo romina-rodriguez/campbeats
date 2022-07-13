@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Activate.gd" type="Script" id=2]
@@ -19,13 +19,14 @@
 [ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/levels/level1/lines.gd" type="Script" id=19]
-
 [ext_resource path="res://assets/Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" type="Texture" id=20]
-[ext_resource path="res://assets/Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" type="Texture" id=21]
+[ext_resource path="res://scenes/levels/level1/Main.gd" type="Script" id=21]
 [ext_resource path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" type="Texture" id=22]
 [ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" type="Texture" id=23]
 [ext_resource path="res://scenes/PinkButterfly.tscn" type="PackedScene" id=24]
 [ext_resource path="res://scenes/GreenButterfly.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" type="Texture" id=26]
+[ext_resource path="res://scenes/CountdownStart.tscn" type="PackedScene" id=27]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 48, 48, 16, 48, 16, 48, 48, 48 )
@@ -35,7 +36,7 @@ points = PoolVector2Array( 48, 48, 16, 48, 16, 48, 48, 48 )
 
 [sub_resource type="TileSet" id=44]
 0/name = "Tropics_entities (16 x 16).png 0"
-0/texture = ExtResource( 21 )
+0/texture = ExtResource( 26 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 16, 16, 48, 48 )
@@ -1367,6 +1368,8 @@ position = Vector2( 1943, 280 )
 [node name="ButterflyGreen2" parent="." instance=ExtResource( 25 )]
 position = Vector2( 6551, 304 )
 
+[node name="Countdown" parent="." instance=ExtResource( 27 )]
+
 [connection signal="dash_made" from="Player" to="HUD" method="_on_Player_dash_made"]
 [connection signal="body_exited" from="MusicNotes/MusicNote" to="MusicNotes/MusicNote" method="_on_MusicNote_body_exited"]
 [connection signal="note_collected" from="MusicNotes/MusicNote" to="HUD" method="_on_MusicNote_collected"]
@@ -1402,13 +1405,6 @@ position = Vector2( 6551, 304 )
 [connection signal="note_collected" from="MusicNotes/MusicNote16" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="body_exited" from="MusicNotes/MusicNote17" to="MusicNotes/MusicNote17" method="_on_MusicNote_body_exited"]
 [connection signal="note_collected" from="MusicNotes/MusicNote17" to="HUD" method="_on_MusicNote_collected"]
-[connection signal="body
-
-
-
-
-
-_exited" from="MusicNotes/MusicNote18" to="MusicNotes/MusicNote18" method="_on_MusicNote_body_exited"]
 [connection signal="note_collected" from="MusicNotes/MusicNote18" to="HUD" method="_on_MusicNote_collected"]
 [connection signal="body_exited" from="MusicNotes/MusicNote19" to="MusicNotes/MusicNote19" method="_on_MusicNote_body_exited"]
 [connection signal="note_collected" from="MusicNotes/MusicNote19" to="HUD" method="_on_MusicNote_collected"]
