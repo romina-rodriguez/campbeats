@@ -447,7 +447,7 @@ states/run/node = SubResource( 63 )
 states/run/position = Vector2( 739, 115 )
 transitions = [ "idle", "attack", SubResource( 56 ), "attack", "idle", SubResource( 57 ), "jump", "attack", SubResource( 59 ), "attack", "jump", SubResource( 60 ), "idle", "jump", SubResource( 61 ), "jump", "idle", SubResource( 62 ), "attack", "run", SubResource( 64 ), "run", "attack", SubResource( 65 ), "idle", "run", SubResource( 66 ), "run", "idle", SubResource( 67 ), "idle", "dash_idle", SubResource( 71 ), "dash_idle", "idle", SubResource( 72 ), "dash_jump", "dash_idle", SubResource( 73 ), "dash_idle", "dash_jump", SubResource( 74 ), "dash_run", "dash_idle", SubResource( 75 ), "dash_idle", "dash_run", SubResource( 76 ), "dash_jump", "attack", SubResource( 77 ), "dash_idle", "attack", SubResource( 78 ), "dash_run", "attack", SubResource( 79 ) ]
 start_node = "dash_jump"
-graph_offset = Vector2( 214.169, 123.613 )
+graph_offset = Vector2( 203.169, -81.9279 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=54]
 
