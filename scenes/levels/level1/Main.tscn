@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Activate.gd" type="Script" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/levels/level1/lines.gd" type="Script" id=19]
+[ext_resource path="res://scenes/CountdownStart.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/levels/level1/Main.gd" type="Script" id=21]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -887,6 +889,7 @@ extents = Vector2( 14, 299.5 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, 0 )
+script = ExtResource( 21 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 26, 0 )
@@ -1227,6 +1230,8 @@ song_length = 3.0
 crotchet_size = 1
 offset = 1
 
+[node name="Countdown" parent="." instance=ExtResource( 20 )]
+
 [connection signal="dash_made" from="Player" to="HUD" method="_on_Player_dash_made"]
 [connection signal="body_exited" from="MusicNotes/MusicNote" to="MusicNotes/MusicNote" method="_on_MusicNote_body_exited"]
 [connection signal="note_collected" from="MusicNotes/MusicNote" to="HUD" method="_on_MusicNote_collected"]
@@ -1277,3 +1282,4 @@ offset = 1
 [connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered1"]
 [connection signal="body_entered" from="levelEnd" to="Player" method="_on_levelEnd_body_entered1"]
 [connection signal="pressed" from="HUD/Menu" to="Player" method="_on_Menu_pressed1"]
+[connection signal="cd_start" from="Countdown" to="." method="_on_Countdown_cd_start"]
