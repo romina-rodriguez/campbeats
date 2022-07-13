@@ -163,7 +163,7 @@ margin_right = 1152.0
 margin_bottom = 312.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Levels"
+text = "LEVELS"
 align = 1
 valign = 1
 
@@ -212,9 +212,9 @@ flat = true
 expand_icon = true
 
 [node name="Panel3" type="Panel" parent="Buttons"]
-margin_left = 600.0
+margin_left = 184.0
 margin_top = 488.0
-margin_right = 952.0
+margin_right = 536.0
 margin_bottom = 656.0
 custom_styles/panel = SubResource( 11 )
 
@@ -232,9 +232,9 @@ flat = true
 expand_icon = true
 
 [node name="Panel4" type="Panel" parent="Buttons"]
-margin_left = 184.0
+margin_left = 600.0
 margin_top = 488.0
-margin_right = 536.0
+margin_right = 952.0
 margin_bottom = 656.0
 custom_styles/panel = SubResource( 11 )
 

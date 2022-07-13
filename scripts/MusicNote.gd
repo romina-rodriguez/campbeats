@@ -11,7 +11,6 @@ signal note_collected
 
 
 func _on_MusicNote_body_entered(body):
-	
 	if(body.name=="Player"):
 		ON_AREA_USER = 1
 	if(ACTIVATE==0 and body.name=="Activate"):
@@ -41,4 +40,5 @@ func _on_MusicNote_body_exited(body):
 func _on_CollectNote_animation_finished(anim_name):
 	queue_free()
 	
+
 
