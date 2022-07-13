@@ -1,18 +1,19 @@
 extends Control
 
 var dialog = [
-	"Hi! I’m Jimmy", 
+	"Hi! My name's Jimmy :)", 
 	"I live in the flowery valley near the enchanted forest", 
-	"Many people say it’s a very dangerous place",
-	"Leyends tell that there you can find all the seasons of the year",
+	"Many people say that the forest is a very dangerous place",
+	"Legends tell that there you can find all the seasons of the year",
 	"Moreover, there are people who say that you can even find a beach if you go deep enough",
 	"Funny, isn’t it?",
 	"Well, to get straight to the point...",
 	"A few days ago, while I was resting on the valley, my radio stopped working",
-	"I tried changing the batteries, but it didn’t work",
-	"The music had disappear, what a tragedy!!!",
-	"Later, I realized that music could be heard coming from the forest. So, I grabbed my sword and I got closer",
-	"And you’re not gonna believe this, but there was a path of musical notes!!!!",
+	"I tried changing the batteries, but it didn’t work :(",
+	"The music had disappeared, how awful!!",
+	"Later, I realized that music could be heard coming from the forest",
+	"So, I grabbed my sword and I got closer",
+	"And you’re not gonna believe this, but I saw a path of musical notes there!!!!",
 	"I’m sure that wherever this path leads me to, I will end up finding the missing music",
 	"Would you like to help me on this quest?",
 	"It's that a yes? Then let's go!!!"

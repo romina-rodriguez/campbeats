@@ -58,7 +58,7 @@ script = ExtResource( 3 )
 
 [node name="MusicCredits" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -16.421
+volume_db = 2.0
 autoplay = true
 
 [node name="Background" type="Control" parent="."]
