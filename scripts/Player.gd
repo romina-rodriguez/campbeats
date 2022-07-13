@@ -71,7 +71,7 @@ func _input(event):
 		JUMP_FORCE = 3.5
 		POWER_UP = true
 		emit_signal("dash_made")
-		yield(get_tree().create_timer(5),"timeout")
+		yield(get_tree().create_timer(3),"timeout")
 		DASH -= 1
 		POWER_UP = false
 		SPEED = 300
