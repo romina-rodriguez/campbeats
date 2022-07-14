@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
@@ -14,6 +14,10 @@ size = 120
 outline_size = 8
 outline_color = Color( 0.968627, 0.87451, 0.411765, 1 )
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 44
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 100
@@ -96,6 +100,17 @@ margin_bottom = 320.0
 custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "RHYTHM QUEST"
+align = 1
+valign = 1
+
+[node name="names" type="Label" parent="Background"]
+margin_top = 64.0
+margin_right = 1152.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 792, 16 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "CAMP BEATS PRESENTS"
 align = 1
 valign = 1
 
@@ -356,7 +371,6 @@ margin_bottom = 136.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Panel6"]
-modulate = Color( 0.133333, 0.180392, 0.560784, 0.760784 )
 margin_top = 40.0
 margin_right = 40.0
 margin_bottom = 87.0
@@ -372,7 +386,6 @@ margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Panel3"]
-modulate = Color( 0.133333, 0.180392, 0.560784, 0.760784 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 7 )
@@ -387,7 +400,6 @@ margin_bottom = 88.0
 custom_styles/panel = SubResource( 10 )
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Panel4"]
-modulate = Color( 0.133333, 0.180392, 0.560784, 0.760784 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 7 )

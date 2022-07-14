@@ -357,5 +357,5 @@ underline = 1
 [connection signal="pressed" from="Panel/musicLinks2/LinkButton" to="." method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="Panel/musicLinks3/LinkButton" to="." method="_on_LinkButtonm3_pressed"]
 [connection signal="pressed" from="Panel/musicLinks4/LinkButton" to="." method="_on_LinkButtonm4_pressed"]
-[connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton1_pressed"]
+[connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton_pressed"]
