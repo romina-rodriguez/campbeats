@@ -1,0 +1,361 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/Credits.gd" type="Script" id=3]
+[ext_resource path="res://assets/Music/8bit Betty - Nikoma's Theme (extended mix).mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 154
+outline_size = 8
+outline_color = Color( 0.968627, 0.87451, 0.411765, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 37
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.164706, 0.447059, 0.713726, 0.203922 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=8]
+size = 42
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 27
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 28
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="MusicCredits" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -5.0
+autoplay = true
+
+[node name="Background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 1152.0
+margin_bottom = 832.0
+color = Color( 0.709804, 0.870588, 1, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_left = -144.0
+margin_top = -80.0
+margin_right = 1336.0
+margin_bottom = 968.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+margin_left = -192.0
+margin_top = -336.0
+margin_right = 1288.0
+margin_bottom = 712.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+margin_left = -160.0
+margin_top = 328.0
+margin_right = 1320.0
+margin_bottom = 1376.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Title" type="Label" parent="Background"]
+margin_top = 16.0
+margin_right = 1152.0
+margin_bottom = 280.0
+custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "CREDITS :)"
+align = 1
+valign = 1
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="back" type="Button" parent="Buttons"]
+margin_left = 64.0
+margin_top = 768.0
+margin_right = 200.0
+margin_bottom = 813.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "go back"
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 64.0
+margin_top = 224.0
+margin_right = 1088.0
+margin_bottom = 752.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="titles" type="Label" parent="Panel"]
+margin_top = 40.0
+margin_right = 1024.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Game Designers & Developers
+
+Music & Sounds
+
+Fonts
+
+2D Assets
+
+Special Thanks To"
+align = 1
+
+[node name="names" type="Label" parent="Panel"]
+margin_top = 88.0
+margin_right = 1024.0
+margin_bottom = 152.0
+rect_pivot_offset = Vector2( 792, 16 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Tomás Calderón R., Fernanda C. Gangas, Romina Rodríguez"
+align = 1
+
+[node name="romina" type="Label" parent="Panel"]
+margin_left = 233.0
+margin_top = 376.0
+margin_right = 1257.0
+margin_bottom = 440.0
+rect_pivot_offset = Vector2( 792, 16 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Romina Rodríguez"
+align = 1
+
+[node name="thanksto" type="Label" parent="Panel"]
+margin_top = 472.0
+margin_right = 1024.0
+margin_bottom = 536.0
+rect_pivot_offset = Vector2( 792, 16 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Gabriel G. Orrego"
+align = 1
+
+[node name="fontLinks" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/fontLinks"]
+margin_left = 472.0
+margin_top = 496.0
+margin_right = 568.0
+margin_bottom = 526.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 12 )
+action_mode = 0
+text = "ngndang,"
+underline = 1
+
+[node name="fontLinks2" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/fontLinks2"]
+margin_left = 576.0
+margin_top = 496.0
+margin_right = 687.0
+margin_bottom = 526.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 12 )
+action_mode = 0
+text = "Cos Ryan"
+underline = 1
+
+[node name="assetsLink" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/assetsLink"]
+margin_left = 273.0
+margin_top = 600.0
+margin_right = 528.0
+margin_bottom = 630.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 13 )
+action_mode = 0
+text = "grafxkidt,"
+underline = 1
+
+[node name="LinkButton2" type="LinkButton" parent="Panel/assetsLink"]
+margin_left = 401.0
+margin_top = 600.0
+margin_right = 656.0
+margin_bottom = 630.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 14 )
+action_mode = 0
+text = "pixelfrog-assets,"
+underline = 1
+
+[node name="musicLinks" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/musicLinks"]
+margin_left = 305.0
+margin_top = 408.0
+margin_right = 435.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 11 )
+action_mode = 0
+text = "tallbeard,"
+underline = 1
+
+[node name="musicLinks2" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/musicLinks2"]
+margin_left = 449.0
+margin_top = 408.0
+margin_right = 592.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 11 )
+action_mode = 0
+text = "coloralpha,"
+underline = 1
+
+[node name="musicLinks3" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/musicLinks3"]
+margin_left = 601.0
+margin_top = 408.0
+margin_right = 739.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 11 )
+action_mode = 0
+text = "8bit Betty,"
+underline = 1
+
+[node name="musicLinks4" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/musicLinks4"]
+margin_left = 751.0
+margin_top = 408.0
+margin_right = 889.0
+margin_bottom = 438.0
+focus_mode = 2
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 11 )
+action_mode = 0
+text = "mixkit"
+underline = 1
+
+[node name="spriteLinks" type="Control" parent="Panel"]
+margin_left = -64.0
+margin_top = -224.0
+margin_right = -24.0
+margin_bottom = -184.0
+
+[node name="LinkButton" type="LinkButton" parent="Panel/spriteLinks"]
+margin_left = 617.0
+margin_top = 600.0
+margin_right = 872.0
+margin_bottom = 630.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.74902, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 10 )
+action_mode = 0
+text = "lhteam,"
+underline = 1
+
+[connection signal="pressed" from="Buttons/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Panel/fontLinks/LinkButton" to="." method="_on_LinkButton3_pressed"]
+[connection signal="pressed" from="Panel/fontLinks2/LinkButton" to="." method="_on_LinkButtonf2_pressed"]
+[connection signal="pressed" from="Panel/assetsLink/LinkButton" to="." method="_on_LinkButton4_pressed"]
+[connection signal="pressed" from="Panel/assetsLink/LinkButton2" to="." method="_on_LinkButton5_pressed"]
+[connection signal="pressed" from="Panel/musicLinks/LinkButton" to="." method="_on_LinkButton2_pressed"]
+[connection signal="pressed" from="Panel/musicLinks2/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="Panel/musicLinks3/LinkButton" to="." method="_on_LinkButtonm3_pressed"]
+[connection signal="pressed" from="Panel/musicLinks4/LinkButton" to="." method="_on_LinkButtonm4_pressed"]
+[connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton1_pressed"]
+[connection signal="pressed" from="Panel/spriteLinks/LinkButton" to="." method="_on_LinkButton_pressed"]

@@ -1,0 +1,415 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/Fonts/FatPix-SVG.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/Rich Eatin'.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/MusicNote.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" type="Texture" id=5]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/16x16 Menu Symbols (53).png" type="Texture" id=7]
+[ext_resource path="res://scripts/MainMenu.gd" type="Script" id=8]
+[ext_resource path="res://assets/Music/8bit Betty - Nikoma's Theme (extended mix).mp3" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+outline_size = 8
+outline_color = Color( 0.968627, 0.87451, 0.411765, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 44
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 37
+font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 14.5, 95.25 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 294.25, 10 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.164706, 0.447059, 0.713726, 0.203922 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.94902, 0.921569, 0.921569, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+
+[node name="Background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 1152.0
+margin_bottom = 832.0
+color = Color( 0.709804, 0.870588, 1, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_left = -144.0
+margin_top = -80.0
+margin_right = 1336.0
+margin_bottom = 968.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+margin_left = -192.0
+margin_top = -336.0
+margin_right = 1288.0
+margin_bottom = 712.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+margin_left = -160.0
+margin_top = 328.0
+margin_right = 1320.0
+margin_bottom = 1376.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Title" type="Label" parent="Background"]
+margin_top = 56.0
+margin_right = 1152.0
+margin_bottom = 320.0
+custom_colors/font_color = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "RHYTHM QUEST"
+align = 1
+valign = 1
+
+[node name="names" type="Label" parent="Background"]
+margin_top = 64.0
+margin_right = 1152.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 792, 16 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "CAMP BEATS PRESENTS"
+align = 1
+valign = 1
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="play" type="Button" parent="Buttons"]
+margin_left = 376.0
+margin_top = 248.0
+margin_right = 760.0
+margin_bottom = 359.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "PLAY!"
+flat = true
+expand_icon = true
+
+[node name="credits" type="Button" parent="Buttons"]
+margin_left = 920.0
+margin_top = 768.0
+margin_right = 1112.0
+margin_bottom = 813.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "credits :)"
+flat = true
+
+[node name="exit" type="Button" parent="Buttons"]
+margin_left = 64.0
+margin_top = 768.0
+margin_right = 184.0
+margin_bottom = 813.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_colors/font_color_hover = Color( 0.905882, 0.662745, 0.662745, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 1, 0.65098, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "exit :("
+flat = true
+
+[node name="ControlsDemo" type="Node" parent="."]
+
+[node name="Player" parent="ControlsDemo" instance=ExtResource( 6 )]
+position = Vector2( 792, 640 )
+
+[node name="notes" type="Node" parent="ControlsDemo"]
+
+[node name="MusicNote2" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
+position = Vector2( 1056, 332 )
+rotation = 0.0488692
+scale = Vector2( 2, 2 )
+input_pickable = false
+
+[node name="MusicNote4" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
+position = Vector2( 352, 404 )
+rotation = 0.113446
+scale = Vector2( 2, 2 )
+input_pickable = false
+
+[node name="MusicNote5" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
+position = Vector2( 128, 332 )
+rotation = -0.120428
+scale = Vector2( 2, 2 )
+input_pickable = false
+
+[node name="MusicNote6" parent="ControlsDemo/notes" instance=ExtResource( 4 )]
+position = Vector2( 848, 404 )
+rotation = -0.178024
+scale = Vector2( 2, 2 )
+input_pickable = false
+
+[node name="limits" type="Node" parent="ControlsDemo"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="ControlsDemo/limits"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D2"]
+position = Vector2( 1072, 608 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ControlsDemo/limits"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D"]
+position = Vector2( 544, 611 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="ControlsDemo/limits"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D3"]
+position = Vector2( 792, 496 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="ControlsDemo/limits"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlsDemo/limits/StaticBody2D4"]
+position = Vector2( 784, 720 )
+shape = SubResource( 6 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 64.0
+margin_top = 480.0
+margin_right = 480.0
+margin_bottom = 728.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="Panel"]
+margin_top = 8.0
+margin_right = 416.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Controls"
+align = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 56.0
+margin_right = 66.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Run"
+
+[node name="Label3" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 152.0
+margin_right = 107.0
+margin_bottom = 179.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Attack"
+
+[node name="Label5" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 200.0
+margin_right = 107.0
+margin_bottom = 227.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Dash"
+
+[node name="Label4" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 104.0
+margin_right = 81.0
+margin_bottom = 131.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Jump"
+
+[node name="Label6" type="Label" parent="Panel"]
+margin_left = 248.0
+margin_top = 56.0
+margin_right = 305.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "or"
+
+[node name="Label7" type="Label" parent="Panel"]
+margin_left = 200.0
+margin_top = 104.0
+margin_right = 257.0
+margin_bottom = 131.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "or"
+
+[node name="Panel" type="Panel" parent="Panel"]
+margin_left = 144.0
+margin_top = 48.0
+margin_right = 184.0
+margin_bottom = 88.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="Label8" type="Label" parent="Panel/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "A"
+align = 1
+valign = 1
+
+[node name="Panel2" type="Panel" parent="Panel"]
+margin_left = 192.0
+margin_top = 48.0
+margin_right = 232.0
+margin_bottom = 88.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="Label9" type="Label" parent="Panel/Panel2"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="Panel5" type="Panel" parent="Panel"]
+margin_left = 144.0
+margin_top = 96.0
+margin_right = 184.0
+margin_bottom = 136.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="Label10" type="Label" parent="Panel/Panel5"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "W"
+align = 1
+valign = 1
+
+[node name="Panel7" type="Panel" parent="Panel"]
+margin_left = 144.0
+margin_top = 145.0
+margin_right = 336.0
+margin_bottom = 185.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="Label11" type="Label" parent="Panel/Panel7"]
+margin_right = 192.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 152, 31 )
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "SPACE"
+align = 1
+valign = 1
+
+[node name="Panel8" type="Panel" parent="Panel"]
+margin_left = 144.0
+margin_top = 192.0
+margin_right = 240.0
+margin_bottom = 231.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="Label12" type="Label" parent="Panel/Panel8"]
+margin_right = 96.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.266667, 0.447059, 0.768627, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "SHIFT"
+align = 1
+valign = 1
+
+[node name="Panel6" type="Panel" parent="Panel"]
+margin_left = 248.0
+margin_top = 96.0
+margin_right = 288.0
+margin_bottom = 136.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel6"]
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 87.0
+rect_rotation = 270.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="Panel3" type="Panel" parent="Panel"]
+margin_left = 288.0
+margin_top = 48.0
+margin_right = 328.0
+margin_bottom = 88.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel3"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 7 )
+expand = true
+flip_h = true
+
+[node name="Panel4" type="Panel" parent="Panel"]
+margin_left = 344.0
+margin_top = 48.0
+margin_right = 384.0
+margin_bottom = 88.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel4"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="MusicMainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -5.0
+autoplay = true
+
+[connection signal="pressed" from="Buttons/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Buttons/exit" to="." method="_on_exit_pressed"]
